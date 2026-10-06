@@ -8,7 +8,7 @@ import algosdk from 'algosdk';
 import { poolUtils, Swap, SwapQuoteType, SwapType, getValidatorAppID } from '@tinymanorg/tinyman-js-sdk';
 
 export const NETWORKS = {
-  testnet: { algod: 'https://testnet-api.algonode.cloud', app: 773799941,   // 773797597 superseded, see README
+  testnet: { algod: 'https://testnet-api.algonode.cloud', app: 773802502,   // 773797597 and 773799941 superseded, see README
              chainId: 416002,
              explorer: 'https://lora.algokit.io/testnet' },
   mainnet: { algod: 'https://mainnet-api.algonode.cloud', app: 0, chainId: 416001,      // 0: not deployed

@@ -17,8 +17,11 @@ what code enforces and what it does not.
   No asset configuration (which could hand away an asset's manager or clawback role), no freeze, no
   key registration, no opt-out of an app.
 * The only ALGO the owner may send is one fee payment, to the fee address fixed at creation.
-* Every token the owner sends goes into a Tinyman sale: each transfer with an amount is followed by a
-  ``swap`` call to the exchange fixed at creation, which checks the transfer goes to its pool.
+* Every token the owner sends goes into a Tinyman sale for ALGO: each transfer with an amount goes to
+  a pool whose own Tinyman record pairs that token with ALGO, and is followed by a ``swap`` call to the
+  exchange fixed at creation. So no token comes back into the account during the group. (Before 6
+  October, app 773799941 on TestNet allowed a token-for-token swap, whose output a close-out could
+  then give away.)
 * A close-out must follow a sale of the owner's whole balance of that token, measured at ``begin``,
   and closes to that sale's pool. So the remainder it moves is zero: nothing is given away, and no
   coin can reach the operator or anyone else. (Before 6 Oct, app 773797597 on TestNet allowed a
@@ -40,7 +43,7 @@ Compile::
     puyapy contracts/dust_guard.py --out-dir artifacts --output-bytecode   (out-dir is relative to this file)
 """
 from algopy import (ARC4Contract, Account, Bytes, Global, GlobalState, OnCompleteAction, TransactionType, Txn,
-                    UInt64, arc4, gtxn, subroutine, urange)
+                    UInt64, arc4, gtxn, op, subroutine, urange)
 
 FEE_BPS = 100           # 1%, in basis points (hundredths of a percent)
 BPS = 10_000
@@ -139,6 +142,12 @@ class DustGuard(ARC4Contract):
             swap = gtxn.ApplicationCallTransaction(i + 1)
             assert swap.app_id.id == self.exchange.value, "a sale needs the exchange call after it"
             assert swap.app_args(0) == Bytes(b"swap"), "a sale is a swap"
+            # Tinyman records each pool's pair in its local state: asset_1 the token, asset_2 0 for ALGO.
+            # The token must go into a token/ALGO pool, so a sale pays ALGO and no token can come back.
+            paired, found = op.AppLocal.get_ex_uint64(t.asset_receiver, self.exchange.value, b"asset_1_id")
+            assert found and paired == t.xfer_asset.id, "a sale goes into this token's pool"
+            other, found = op.AppLocal.get_ex_uint64(t.asset_receiver, self.exchange.value, b"asset_2_id")
+            assert found and other == 0, "a sale is for ALGO"
         if t.asset_close_to != Global.zero_address:
             assert i >= 2, "a close-out follows its sale"
             sale = gtxn.AssetTransferTransaction(i - 2)

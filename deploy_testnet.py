@@ -5,8 +5,9 @@
 Keys come from .env (never committed): TESTNET_MNEMONIC funds and deploys; a second, seller key is
 made on first run and added there. Each step's result goes to testnet.json, so a rerun resumes
 where it stopped. Steps: the guard, a test token, the fee address opened on TestNet, a Tinyman pool
-for the token with liquidity, a seller holding some of the token, and the sweep: the seller's own
-signed group of begin, swap, close-out, fee and end, submitted and confirmed.
+for the token with liquidity, a second token with a token/token pool (for the token-swap test), a
+seller holding some of the token, and the sweep: the seller's own signed group of begin, swap,
+close-out, fee and end, submitted and confirmed.
 """
 import base64, json, sys
 from pathlib import Path
@@ -78,15 +79,22 @@ def main(fee_address):
         g.sign_with_private_key(me, me_key)
         return tiny.submit(g, wait=True)
 
-    def pool():
-        p = tiny.fetch_pool(token, 0)
+    def make_pool(a, b, amount_a, amount_b):
+        """A Tinyman pool for assets a and b (0 is ALGO), with initial liquidity from us."""
+        p = tiny.fetch_pool(a, b)
         tinyman_send(p.prepare_bootstrap_transactions(user_address=me, suggested_params=sp))
-        p = tiny.fetch_pool(token, 0)
+        p = tiny.fetch_pool(a, b)
         tinyman_send(tiny.prepare_asset_optin_transactions(p.pool_token_asset.id, user_address=me))
-        amounts = {p.asset_1: AssetAmount(p.asset_1, POOL_TOKENS), p.asset_2: AssetAmount(p.asset_2, POOL_ALGO)}
-        tinyman_send(p.prepare_initial_add_liquidity_transactions(amounts, user_address=me, suggested_params=sp))
+        amounts = {a: amount_a, b: amount_b}
+        tinyman_send(p.prepare_initial_add_liquidity_transactions(
+            {x: AssetAmount(x, amounts[x.id]) for x in (p.asset_1, p.asset_2)}, user_address=me, suggested_params=sp))
         return p.address
-    step(state, 'pool', pool)
+    step(state, 'pool', lambda: make_pool(token, 0, POOL_TOKENS, POOL_ALGO))
+    # A second token and a token/token pool: what a dishonest page could swap through instead of ALGO.
+    token2 = step(state, 'token2', lambda: send(client, [transaction.AssetConfigTxn(
+        me, sp, total=10**9, decimals=0, default_frozen=False, unit_name='DUST2', asset_name='DustBank test dust 2',
+        strict_empty_address_check=False)], me_key)['asset-index'])
+    step(state, 'pool2', lambda: make_pool(token2, token, POOL_TOKENS, POOL_TOKENS))
 
     def fund_seller():
         send(client, [transaction.PaymentTxn(me, sp, seller, 1_000_000)], me_key)
@@ -97,7 +105,8 @@ def main(fee_address):
 
     def sweep():
         seller_tiny = TinymanV2TestnetClient(algod_client=client, user_address=seller)
-        txns, gain, fee = next(group.groups(seller_tiny, seller, fee_address, [(token, SELL)], sp, app,
+        whole = next(a['amount'] for a in client.account_info(seller)['assets'] if a['asset-id'] == token)
+        txns, gain, fee = next(group.groups(seller_tiny, seller, fee_address, [(token, whole)], sp, app,
                                             witness=False, holder=False))
         return {'txid': send(client, txns, seller_key)['txid'], 'estimated_gain': gain, 'fee': fee}
     step(state, 'sweep', sweep)

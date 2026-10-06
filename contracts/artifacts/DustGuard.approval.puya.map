@@ -3,7 +3,7 @@
   "sources": [
     "../dust_guard.py"
   ],
-  "mappings": "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",
+  "mappings": "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",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -14,7 +14,7 @@
       "op": "intcblock 0 1 6 4"
     },
     "7": {
-      "op": "bytecblock \"owner\" \"start\" \"fee_address\" \"exchange\" \"iterations\" \"returned\" \"fees\""
+      "op": "bytecblock \"exchange\" \"owner\" \"start\" \"fee_address\" \"iterations\" \"returned\" \"fees\""
     },
     "67": {
       "op": "txn OnCompletion",
@@ -339,7 +339,7 @@
       ]
     },
     "146": {
-      "op": "bytec_2 // \"fee_address\"",
+      "op": "bytec_3 // \"fee_address\"",
       "defined_out": [
         "\"fee_address\"",
         "exchange#0",
@@ -366,7 +366,7 @@
       ]
     },
     "150": {
-      "op": "bytec_3 // \"exchange\"",
+      "op": "bytec_0 // \"exchange\"",
       "defined_out": [
         "\"exchange\"",
         "exchange#0"
@@ -388,7 +388,7 @@
       "stack_out": []
     },
     "153": {
-      "op": "bytec_0 // \"owner\"",
+      "op": "bytec_1 // \"owner\"",
       "defined_out": [
         "\"owner\""
       ],
@@ -412,7 +412,7 @@
       "stack_out": []
     },
     "157": {
-      "op": "bytec_1 // \"start\"",
+      "op": "bytec_2 // \"start\"",
       "defined_out": [
         "\"start\""
       ],
@@ -731,7 +731,7 @@
       ]
     },
     "211": {
-      "op": "bytec_2 // \"fee_address\"",
+      "op": "bytec_3 // \"fee_address\"",
       "defined_out": [
         "\"fee_address\"",
         "0",
@@ -1218,7 +1218,7 @@
         "tmp%9#0",
         "i#0"
       ],
-      "op": "bytec_0 // \"owner\"",
+      "op": "bytec_1 // \"owner\"",
       "defined_out": [
         "\"owner\""
       ],
@@ -1272,7 +1272,7 @@
       ]
     },
     "286": {
-      "op": "bytec_1 // \"start\"",
+      "op": "bytec_2 // \"start\"",
       "defined_out": [
         "\"start\"",
         "tmp%22#0"
@@ -1445,111 +1445,136 @@
       "stack_in": [],
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1"
+        "tmp%21#0"
       ]
     },
     "321": {
       "op": "pushbytes \"\"",
       "stack_out": [
-        "tmp%12#1",
-        "tmp%27#0"
+        "tmp%21#0",
+        "other#0"
       ]
     },
     "323": {
+      "op": "dupn 2",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0"
+      ]
+    },
+    "325": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "0"
       ]
     },
-    "324": {
-      "op": "bytec_0 // \"owner\"",
+    "326": {
+      "op": "bytec_1 // \"owner\"",
       "defined_out": [
         "\"owner\"",
         "0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "0",
         "\"owner\""
       ]
     },
-    "325": {
+    "327": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
         "owner#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "maybe_exists%0#0"
       ]
     },
-    "326": {
+    "328": {
       "op": "swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "maybe_exists%0#0",
         "owner#0"
       ]
     },
-    "327": {
+    "329": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "maybe_exists%0#0",
         "owner#0",
         "owner#0 (copy)"
       ]
     },
-    "328": {
+    "330": {
       "op": "uncover 2",
       "defined_out": [
         "maybe_exists%0#0",
         "owner#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
         "maybe_exists%0#0"
       ]
     },
-    "330": {
+    "332": {
       "error": "check self.owner exists",
       "op": "assert // check self.owner exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0"
       ]
     },
-    "331": {
+    "333": {
       "op": "txn GroupIndex",
       "defined_out": [
         "owner#0",
         "tmp%0#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
         "tmp%0#1"
       ]
     },
-    "333": {
+    "335": {
       "op": "global GroupSize",
       "defined_out": [
         "owner#0",
@@ -1557,7 +1582,9 @@
         "tmp%1#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
@@ -1565,7 +1592,7 @@
         "tmp%1#1"
       ]
     },
-    "335": {
+    "337": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -1574,7 +1601,9 @@
         "tmp%1#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
@@ -1583,7 +1612,7 @@
         "1"
       ]
     },
-    "336": {
+    "338": {
       "op": "-",
       "defined_out": [
         "owner#0",
@@ -1591,7 +1620,9 @@
         "tmp%2#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
@@ -1599,73 +1630,83 @@
         "tmp%2#1"
       ]
     },
-    "337": {
+    "339": {
       "op": "==",
       "defined_out": [
         "owner#0",
         "tmp%3#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
         "tmp%3#0"
       ]
     },
-    "338": {
+    "340": {
       "error": "end must be last",
       "op": "assert // end must be last",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0"
       ]
     },
-    "339": {
+    "341": {
       "op": "txn Sender",
       "defined_out": [
         "owner#0",
         "tmp%4#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "owner#0",
         "tmp%4#0"
       ]
     },
-    "341": {
+    "343": {
       "op": "==",
       "defined_out": [
         "owner#0",
         "tmp%5#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%5#0"
       ]
     },
-    "342": {
+    "344": {
       "error": "begin and end must be the same owner",
       "op": "assert // begin and end must be the same owner",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0"
       ]
     },
-    "343": {
+    "345": {
       "op": "global GroupSize"
     },
-    "345": {
+    "347": {
       "op": "intc_0 // 0"
     },
-    "346": {
+    "348": {
       "op": "dup",
       "defined_out": [
         "fee#0",
@@ -1674,7 +1715,9 @@
         "tmp%6#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1682,10 +1725,12 @@
         "i#0"
       ]
     },
-    "347": {
+    "349": {
       "block": "end_for_header@2",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1697,7 +1742,9 @@
         "i#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1706,14 +1753,16 @@
         "i#0 (copy)"
       ]
     },
-    "348": {
+    "350": {
       "op": "dig 3",
       "defined_out": [
         "i#0 (copy)",
         "tmp%6#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1723,13 +1772,15 @@
         "tmp%6#0 (copy)"
       ]
     },
-    "350": {
+    "352": {
       "op": "<",
       "defined_out": [
         "continue_looping%0#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1738,10 +1789,12 @@
         "continue_looping%0#0"
       ]
     },
-    "351": {
+    "353": {
       "op": "bz end_after_for@19",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1749,14 +1802,16 @@
         "i#0"
       ]
     },
-    "354": {
+    "356": {
       "op": "dupn 2",
       "defined_out": [
         "i#0",
         "i#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1766,14 +1821,16 @@
         "i#0 (copy)"
       ]
     },
-    "356": {
+    "358": {
       "op": "gtxns Sender",
       "defined_out": [
         "i#0",
         "tmp%7#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1783,7 +1840,7 @@
         "tmp%7#0"
       ]
     },
-    "358": {
+    "360": {
       "op": "dig 5",
       "defined_out": [
         "i#0",
@@ -1791,7 +1848,9 @@
         "tmp%7#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1802,14 +1861,16 @@
         "owner#0 (copy)"
       ]
     },
-    "360": {
+    "362": {
       "op": "==",
       "defined_out": [
         "i#0",
         "tmp%8#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1819,11 +1880,13 @@
         "tmp%8#0"
       ]
     },
-    "361": {
+    "363": {
       "error": "every transaction is the owner's",
       "op": "assert // every transaction is the owner's",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1832,10 +1895,12 @@
         "i#0"
       ]
     },
-    "362": {
+    "364": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1845,14 +1910,16 @@
         "i#0 (copy)"
       ]
     },
-    "363": {
+    "365": {
       "op": "gtxns RekeyTo",
       "defined_out": [
         "i#0",
         "tmp%9#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1862,7 +1929,7 @@
         "tmp%9#0"
       ]
     },
-    "365": {
+    "367": {
       "op": "global ZeroAddress",
       "defined_out": [
         "i#0",
@@ -1870,7 +1937,9 @@
         "tmp%9#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1881,14 +1950,16 @@
         "tmp%10#0"
       ]
     },
-    "367": {
+    "369": {
       "op": "==",
       "defined_out": [
         "i#0",
         "tmp%11#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1898,11 +1969,13 @@
         "tmp%11#0"
       ]
     },
-    "368": {
+    "370": {
       "error": "no rekey",
       "op": "assert // no rekey",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1911,14 +1984,16 @@
         "i#0"
       ]
     },
-    "369": {
+    "371": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "i#0",
         "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1927,14 +2002,16 @@
         "tmp%12#0"
       ]
     },
-    "371": {
+    "373": {
       "op": "dup",
       "defined_out": [
         "i#0",
         "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1944,7 +2021,7 @@
         "tmp%12#0"
       ]
     },
-    "372": {
+    "374": {
       "op": "intc_1 // pay",
       "defined_out": [
         "i#0",
@@ -1952,7 +2029,9 @@
         "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1963,7 +2042,7 @@
         "pay"
       ]
     },
-    "373": {
+    "375": {
       "op": "==",
       "defined_out": [
         "i#0",
@@ -1971,7 +2050,9 @@
         "tmp%13#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1981,10 +2062,12 @@
         "tmp%13#0"
       ]
     },
-    "374": {
+    "376": {
       "op": "bz end_else_body@5",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -1993,10 +2076,12 @@
         "tmp%12#0"
       ]
     },
-    "377": {
+    "379": {
       "op": "pop",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2004,10 +2089,12 @@
         "i#0"
       ]
     },
-    "378": {
+    "380": {
       "op": "dupn 2",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2017,14 +2104,16 @@
         "i#0 (copy)"
       ]
     },
-    "380": {
+    "382": {
       "op": "gtxns Receiver",
       "defined_out": [
         "i#0",
         "tmp%14#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2034,10 +2123,12 @@
         "tmp%14#0"
       ]
     },
-    "382": {
+    "384": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2048,8 +2139,8 @@
         "0"
       ]
     },
-    "383": {
-      "op": "bytec_2 // \"fee_address\"",
+    "385": {
+      "op": "bytec_3 // \"fee_address\"",
       "defined_out": [
         "\"fee_address\"",
         "0",
@@ -2057,7 +2148,9 @@
         "tmp%14#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2069,7 +2162,7 @@
         "\"fee_address\""
       ]
     },
-    "384": {
+    "386": {
       "op": "app_global_get_ex",
       "defined_out": [
         "i#0",
@@ -2078,7 +2171,9 @@
         "tmp%14#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2090,11 +2185,13 @@
         "maybe_exists%1#0"
       ]
     },
-    "385": {
+    "387": {
       "error": "check self.fee_address exists",
       "op": "assert // check self.fee_address exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2105,14 +2202,16 @@
         "maybe_value%1#0"
       ]
     },
-    "386": {
+    "388": {
       "op": "==",
       "defined_out": [
         "i#0",
         "tmp%15#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2122,11 +2221,13 @@
         "tmp%15#0"
       ]
     },
-    "387": {
+    "389": {
       "error": "the only ALGO sent is the fee",
       "op": "assert // the only ALGO sent is the fee",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2135,10 +2236,12 @@
         "i#0"
       ]
     },
-    "388": {
+    "390": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2148,14 +2251,16 @@
         "i#0 (copy)"
       ]
     },
-    "389": {
+    "391": {
       "op": "gtxns CloseRemainderTo",
       "defined_out": [
         "i#0",
         "tmp%16#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2165,7 +2270,7 @@
         "tmp%16#0"
       ]
     },
-    "391": {
+    "393": {
       "op": "global ZeroAddress",
       "defined_out": [
         "i#0",
@@ -2173,7 +2278,9 @@
         "tmp%17#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2184,14 +2291,16 @@
         "tmp%17#0"
       ]
     },
-    "393": {
+    "395": {
       "op": "==",
       "defined_out": [
         "i#0",
         "tmp%18#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2201,11 +2310,13 @@
         "tmp%18#0"
       ]
     },
-    "394": {
+    "396": {
       "error": "no closing an account",
       "op": "assert // no closing an account",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2214,14 +2325,16 @@
         "i#0"
       ]
     },
-    "395": {
+    "397": {
       "op": "uncover 2",
       "defined_out": [
         "fee#0",
         "i#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2230,14 +2343,16 @@
         "fee#0"
       ]
     },
-    "397": {
+    "399": {
       "op": "!",
       "defined_out": [
         "i#0",
         "tmp%19#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2246,11 +2361,13 @@
         "tmp%19#0"
       ]
     },
-    "398": {
+    "400": {
       "error": "one fee payment at most",
       "op": "assert // one fee payment at most",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2258,10 +2375,12 @@
         "i#0"
       ]
     },
-    "399": {
+    "401": {
       "op": "gtxns Amount",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2269,14 +2388,16 @@
         "fee#0"
       ]
     },
-    "401": {
+    "403": {
       "op": "swap",
       "defined_out": [
         "fee#0",
         "i#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2284,10 +2405,12 @@
         "i#0"
       ]
     },
-    "402": {
+    "404": {
       "block": "end_after_if_else@17",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2300,7 +2423,9 @@
         "i#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2309,13 +2434,15 @@
         "1"
       ]
     },
-    "403": {
+    "405": {
       "op": "+",
       "defined_out": [
         "i#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2323,13 +2450,15 @@
         "i#0"
       ]
     },
-    "404": {
+    "406": {
       "op": "b end_for_header@2"
     },
-    "407": {
+    "409": {
       "block": "end_else_body@5",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2342,7 +2471,9 @@
         "tmp%12#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2352,14 +2483,16 @@
         "tmp%12#0 (copy)"
       ]
     },
-    "408": {
+    "410": {
       "op": "intc_3 // axfer",
       "defined_out": [
         "axfer",
         "tmp%12#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2370,13 +2503,15 @@
         "axfer"
       ]
     },
-    "409": {
+    "411": {
       "op": "==",
       "defined_out": [
         "tmp%22#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2386,13 +2521,15 @@
         "tmp%22#0"
       ]
     },
-    "410": {
+    "412": {
       "op": "dup",
       "defined_out": [
         "tmp%22#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2403,10 +2540,12 @@
         "tmp%22#0"
       ]
     },
-    "411": {
+    "413": {
       "op": "bz end_else_body@7",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2416,13 +2555,15 @@
         "tmp%22#0"
       ]
     },
-    "414": {
+    "416": {
       "op": "bury 1",
       "defined_out": [
         "tmp%22#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2431,11 +2572,13 @@
         "tmp%22#0"
       ]
     },
-    "416": {
+    "418": {
       "error": "transaction type is axfer",
       "op": "assert // transaction type is axfer",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2443,14 +2586,16 @@
         "i#0"
       ]
     },
-    "417": {
+    "419": {
       "op": "dupn 2",
       "defined_out": [
         "i#0",
         "i#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2460,14 +2605,16 @@
         "i#0 (copy)"
       ]
     },
-    "419": {
+    "421": {
       "op": "gtxns AssetSender",
       "defined_out": [
         "i#0",
         "tmp%0#2"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2477,7 +2624,7 @@
         "tmp%0#2"
       ]
     },
-    "421": {
+    "423": {
       "op": "global ZeroAddress",
       "defined_out": [
         "i#0",
@@ -2485,7 +2632,9 @@
         "tmp%1#2"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2496,14 +2645,16 @@
         "tmp%1#2"
       ]
     },
-    "423": {
+    "425": {
       "op": "==",
       "defined_out": [
         "i#0",
         "tmp%2#2"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2513,11 +2664,13 @@
         "tmp%2#2"
       ]
     },
-    "424": {
+    "426": {
       "error": "no clawback",
       "op": "assert // no clawback",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2526,14 +2679,16 @@
         "i#0"
       ]
     },
-    "425": {
+    "427": {
       "op": "gtxns AssetAmount",
       "defined_out": [
         "i#0",
         "tmp%3#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2542,10 +2697,12 @@
         "tmp%3#1"
       ]
     },
-    "427": {
-      "op": "bz end_after_if_else@22",
+    "429": {
+      "op": "bz end_after_if_else@30",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -2553,19 +2710,22 @@
         "i#0"
       ]
     },
-    "430": {
-      "op": "dup",
+    "432": {
+      "op": "dupn 2",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "i#0 (copy)"
       ]
     },
-    "431": {
+    "434": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -2573,36 +2733,42 @@
         "i#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "i#0 (copy)",
         "1"
       ]
     },
-    "432": {
+    "435": {
       "op": "+",
       "defined_out": [
         "i#0",
         "swap#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "swap#0"
       ]
     },
-    "433": {
+    "436": {
       "op": "dup"
     },
-    "434": {
+    "437": {
       "op": "global GroupSize",
       "defined_out": [
         "i#0",
@@ -2611,18 +2777,21 @@
         "tmp%6#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "swap#0 (copy)",
         "tmp%6#1"
       ]
     },
-    "436": {
+    "439": {
       "op": "<",
       "defined_out": [
         "i#0",
@@ -2630,43 +2799,52 @@
         "tmp%7#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "tmp%7#1"
       ]
     },
-    "437": {
+    "440": {
       "error": "a sale needs the exchange call after it",
       "op": "assert // a sale needs the exchange call after it",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "swap#0"
       ]
     },
-    "438": {
+    "441": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "swap#0 (copy)"
       ]
     },
-    "439": {
+    "442": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_type%1#0",
@@ -2674,17 +2852,20 @@
         "swap#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "swap#0",
         "gtxn_type%1#0"
       ]
     },
-    "441": {
+    "444": {
       "op": "intc_2 // appl",
       "defined_out": [
         "appl",
@@ -2693,18 +2874,21 @@
         "swap#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "gtxn_type%1#0",
         "appl"
       ]
     },
-    "442": {
+    "445": {
       "op": "==",
       "defined_out": [
         "gtxn_type_matches%1#0",
@@ -2712,43 +2896,52 @@
         "swap#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "gtxn_type_matches%1#0"
       ]
     },
-    "443": {
+    "446": {
       "error": "transaction type is appl",
       "op": "assert // transaction type is appl",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "swap#0"
       ]
     },
-    "444": {
+    "447": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "swap#0 (copy)"
       ]
     },
-    "445": {
+    "448": {
       "op": "gtxns ApplicationID",
       "defined_out": [
         "i#0",
@@ -2756,32 +2949,38 @@
         "tmp%8#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "swap#0",
         "tmp%8#1"
       ]
     },
-    "447": {
+    "450": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "tmp%8#1",
         "0"
       ]
     },
-    "448": {
-      "op": "bytec_3 // \"exchange\"",
+    "451": {
+      "op": "bytec_0 // \"exchange\"",
       "defined_out": [
         "\"exchange\"",
         "0",
@@ -2790,11 +2989,14 @@
         "tmp%8#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "tmp%8#1",
@@ -2802,7 +3004,7 @@
         "\"exchange\""
       ]
     },
-    "449": {
+    "452": {
       "op": "app_global_get_ex",
       "defined_out": [
         "i#0",
@@ -2812,11 +3014,14 @@
         "tmp%8#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "tmp%8#1",
@@ -2824,218 +3029,706 @@
         "maybe_exists%0#0"
       ]
     },
-    "450": {
+    "453": {
       "error": "check self.exchange exists",
       "op": "assert // check self.exchange exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
+        "i#0",
         "i#0",
         "swap#0",
         "tmp%8#1",
         "maybe_value%0#0"
       ]
     },
-    "451": {
+    "454": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "i#0",
+        "swap#0",
+        "maybe_value%0#0",
+        "tmp%8#1"
+      ]
+    },
+    "455": {
+      "op": "dig 1",
+      "defined_out": [
+        "i#0",
+        "maybe_value%0#0",
+        "maybe_value%0#0 (copy)",
+        "swap#0",
+        "tmp%8#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "i#0",
+        "swap#0",
+        "maybe_value%0#0",
+        "tmp%8#1",
+        "maybe_value%0#0 (copy)"
+      ]
+    },
+    "457": {
       "op": "==",
       "defined_out": [
         "i#0",
+        "maybe_value%0#0",
         "swap#0",
         "tmp%9#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
         "swap#0",
+        "maybe_value%0#0",
         "tmp%9#1"
       ]
     },
-    "452": {
+    "458": {
       "error": "a sale needs the exchange call after it",
       "op": "assert // a sale needs the exchange call after it",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
+        "swap#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "459": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "i#0",
+        "maybe_value%0#0",
         "swap#0"
       ]
     },
-    "453": {
+    "460": {
       "op": "gtxnsa ApplicationArgs 0",
       "defined_out": [
         "i#0",
+        "maybe_value%0#0",
         "tmp%10#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
+        "maybe_value%0#0",
         "tmp%10#1"
       ]
     },
-    "456": {
+    "463": {
       "op": "pushbytes 0x73776170",
       "defined_out": [
         "0x73776170",
         "i#0",
+        "maybe_value%0#0",
         "tmp%10#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
+        "maybe_value%0#0",
         "tmp%10#1",
         "0x73776170"
       ]
     },
-    "462": {
+    "469": {
       "op": "==",
       "defined_out": [
         "i#0",
+        "maybe_value%0#0",
         "tmp%11#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
+        "i#0",
+        "maybe_value%0#0",
         "tmp%11#0"
-      ]
-    },
-    "463": {
-      "error": "a sale is a swap",
-      "op": "assert // a sale is a swap",
-      "stack_out": [
-        "tmp%12#1",
-        "tmp%27#0",
-        "owner#0",
-        "tmp%6#0",
-        "fee#0",
-        "i#0"
-      ]
-    },
-    "464": {
-      "block": "end_after_if_else@22",
-      "stack_in": [
-        "tmp%12#1",
-        "tmp%27#0",
-        "owner#0",
-        "tmp%6#0",
-        "fee#0",
-        "i#0"
-      ],
-      "op": "dup",
-      "defined_out": [
-        "i#0 (copy)"
-      ],
-      "stack_out": [
-        "tmp%12#1",
-        "tmp%27#0",
-        "owner#0",
-        "tmp%6#0",
-        "fee#0",
-        "i#0",
-        "i#0 (copy)"
-      ]
-    },
-    "465": {
-      "op": "gtxns AssetCloseTo",
-      "defined_out": [
-        "tmp%12#1"
-      ],
-      "stack_out": [
-        "tmp%12#1",
-        "tmp%27#0",
-        "owner#0",
-        "tmp%6#0",
-        "fee#0",
-        "i#0",
-        "tmp%12#1"
-      ]
-    },
-    "467": {
-      "op": "dup",
-      "stack_out": [
-        "tmp%12#1",
-        "tmp%27#0",
-        "owner#0",
-        "tmp%6#0",
-        "fee#0",
-        "i#0",
-        "tmp%12#1",
-        "tmp%12#1"
-      ]
-    },
-    "468": {
-      "op": "bury 7",
-      "defined_out": [
-        "tmp%12#1"
-      ],
-      "stack_out": [
-        "tmp%12#1",
-        "tmp%27#0",
-        "owner#0",
-        "tmp%6#0",
-        "fee#0",
-        "i#0",
-        "tmp%12#1"
       ]
     },
     "470": {
-      "op": "global ZeroAddress",
-      "defined_out": [
-        "tmp%12#1",
-        "tmp%13#1"
-      ],
+      "error": "a sale is a swap",
+      "op": "assert // a sale is a swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
-        "tmp%12#1",
-        "tmp%13#1"
+        "i#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "471": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "maybe_value%0#0",
+        "i#0"
       ]
     },
     "472": {
-      "op": "!=",
+      "op": "gtxns AssetReceiver",
       "defined_out": [
-        "tmp%12#1",
-        "tmp%14#1"
+        "i#0",
+        "maybe_value%0#0",
+        "tmp%12#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
-        "tmp%14#1"
+        "maybe_value%0#0",
+        "tmp%12#1"
       ]
     },
-    "473": {
-      "op": "bz end_after_if_else@17",
+    "474": {
+      "op": "dup",
       "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "maybe_value%0#0",
         "tmp%12#1",
+        "tmp%12#1"
+      ]
+    },
+    "475": {
+      "op": "cover 3",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "maybe_value%0#0",
+        "tmp%12#1"
+      ]
+    },
+    "477": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "tmp%12#1",
+        "maybe_value%0#0"
+      ]
+    },
+    "478": {
+      "op": "pushbytes 0x61737365745f315f6964",
+      "defined_out": [
+        "0x61737365745f315f6964",
+        "i#0",
+        "maybe_value%0#0",
+        "tmp%12#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "tmp%12#1",
+        "maybe_value%0#0",
+        "0x61737365745f315f6964"
+      ]
+    },
+    "490": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "found#0",
+        "i#0",
+        "paired#0",
+        "tmp%12#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "paired#0",
+        "found#0"
+      ]
+    },
+    "491": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "found#0",
+        "paired#0"
+      ]
+    },
+    "492": {
+      "op": "bury 8",
+      "defined_out": [
+        "found#0",
+        "i#0",
+        "paired#0",
+        "tmp%12#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "found#0"
+      ]
+    },
+    "494": {
+      "op": "bz end_bool_false@24",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0"
+      ]
+    },
+    "497": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "i#0 (copy)"
+      ]
+    },
+    "498": {
+      "op": "gtxns XferAsset",
+      "defined_out": [
+        "i#0",
+        "paired#0",
+        "tmp%12#1",
+        "tmp%15#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "tmp%15#1"
+      ]
+    },
+    "500": {
+      "op": "dig 7",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "tmp%15#1",
+        "paired#0"
+      ]
+    },
+    "502": {
+      "op": "==",
+      "defined_out": [
+        "i#0",
+        "paired#0",
+        "tmp%12#1",
+        "tmp%16#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "tmp%16#1"
+      ]
+    },
+    "503": {
+      "op": "bz end_bool_false@24",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0"
+      ]
+    },
+    "506": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "and_result%0#0",
+        "i#0",
+        "paired#0",
+        "tmp%12#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "and_result%0#0"
+      ]
+    },
+    "507": {
+      "error": "a sale goes into this token's pool",
+      "block": "end_bool_merge@25",
+      "stack_in": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "and_result%0#0"
+      ],
+      "op": "assert // a sale goes into this token's pool",
+      "defined_out": [],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0"
+      ]
+    },
+    "508": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "0"
+      ]
+    },
+    "509": {
+      "op": "bytec_0 // \"exchange\"",
+      "defined_out": [
+        "\"exchange\"",
+        "0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "0",
+        "\"exchange\""
+      ]
+    },
+    "510": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "511": {
+      "error": "check self.exchange exists",
+      "op": "assert // check self.exchange exists",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "512": {
+      "op": "uncover 2",
+      "defined_out": [
+        "maybe_value%2#0",
+        "tmp%12#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "maybe_value%2#0",
+        "tmp%12#1"
+      ]
+    },
+    "514": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%12#1",
+        "maybe_value%2#0"
+      ]
+    },
+    "515": {
+      "op": "pushbytes 0x61737365745f325f6964",
+      "defined_out": [
+        "0x61737365745f325f6964",
+        "maybe_value%2#0",
+        "tmp%12#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%12#1",
+        "maybe_value%2#0",
+        "0x61737365745f325f6964"
+      ]
+    },
+    "527": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "found#0",
+        "other#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "other#0",
+        "found#0"
+      ]
+    },
+    "528": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "found#0",
+        "other#0"
+      ]
+    },
+    "529": {
+      "op": "bury 8",
+      "defined_out": [
+        "found#0",
+        "other#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "found#0"
+      ]
+    },
+    "531": {
+      "op": "bz end_bool_false@28",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3043,15 +3736,216 @@
         "i#0"
       ]
     },
-    "476": {
+    "534": {
+      "op": "dig 6",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "other#0"
+      ]
+    },
+    "536": {
+      "op": "bnz end_bool_false@28",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0"
+      ]
+    },
+    "539": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "and_result%1#0",
+        "other#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "and_result%1#0"
+      ]
+    },
+    "540": {
+      "error": "a sale is for ALGO",
+      "block": "end_bool_merge@29",
+      "stack_in": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "and_result%1#0"
+      ],
+      "op": "assert // a sale is for ALGO",
+      "defined_out": [],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0"
+      ]
+    },
+    "541": {
+      "block": "end_after_if_else@30",
+      "stack_in": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "i#0 (copy)"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "i#0 (copy)"
+      ]
+    },
+    "542": {
+      "op": "gtxns AssetCloseTo",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%21#0"
+      ]
+    },
+    "544": {
+      "op": "dup",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%21#0",
+        "tmp%21#0"
+      ]
+    },
+    "545": {
+      "op": "bury 9",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%21#0"
+      ]
+    },
+    "547": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "tmp%21#0",
+        "tmp%22#1"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%21#0",
+        "tmp%22#1"
+      ]
+    },
+    "549": {
+      "op": "!=",
+      "defined_out": [
+        "tmp%21#0",
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "tmp%23#0"
+      ]
+    },
+    "550": {
+      "op": "bz end_after_if_else@17",
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0"
+      ]
+    },
+    "553": {
       "op": "dupn 2",
       "defined_out": [
         "i#0",
         "i#0 (copy)",
-        "tmp%12#1"
+        "tmp%21#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3061,10 +3955,12 @@
         "i#0 (copy)"
       ]
     },
-    "478": {
+    "555": {
       "op": "pushint 2",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3075,29 +3971,33 @@
         "2"
       ]
     },
-    "480": {
+    "557": {
       "op": ">=",
       "defined_out": [
         "i#0",
-        "tmp%12#1",
-        "tmp%15#0"
+        "tmp%21#0",
+        "tmp%24#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
         "i#0",
-        "tmp%15#0"
+        "tmp%24#0"
       ]
     },
-    "481": {
+    "558": {
       "error": "a close-out follows its sale",
       "op": "assert // a close-out follows its sale",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3106,10 +4006,12 @@
         "i#0"
       ]
     },
-    "482": {
+    "559": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3119,10 +4021,12 @@
         "i#0 (copy)"
       ]
     },
-    "483": {
+    "560": {
       "op": "pushint 2",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3133,15 +4037,17 @@
         "2"
       ]
     },
-    "485": {
+    "562": {
       "op": "-",
       "defined_out": [
         "i#0",
         "sale#0",
-        "tmp%12#1"
+        "tmp%21#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3151,16 +4057,18 @@
         "sale#0"
       ]
     },
-    "486": {
+    "563": {
       "op": "dup",
       "defined_out": [
         "i#0",
         "sale#0",
         "sale#0 (copy)",
-        "tmp%12#1"
+        "tmp%21#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3171,16 +4079,18 @@
         "sale#0 (copy)"
       ]
     },
-    "487": {
+    "564": {
       "op": "gtxns TypeEnum",
       "defined_out": [
         "gtxn_type%2#0",
         "i#0",
         "sale#0",
-        "tmp%12#1"
+        "tmp%21#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3191,17 +4101,19 @@
         "gtxn_type%2#0"
       ]
     },
-    "489": {
+    "566": {
       "op": "intc_3 // axfer",
       "defined_out": [
         "axfer",
         "gtxn_type%2#0",
         "i#0",
         "sale#0",
-        "tmp%12#1"
+        "tmp%21#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3213,16 +4125,18 @@
         "axfer"
       ]
     },
-    "490": {
+    "567": {
       "op": "==",
       "defined_out": [
         "gtxn_type_matches%2#0",
         "i#0",
         "sale#0",
-        "tmp%12#1"
+        "tmp%21#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3233,11 +4147,13 @@
         "gtxn_type_matches%2#0"
       ]
     },
-    "491": {
+    "568": {
       "error": "transaction type is axfer",
       "op": "assert // transaction type is axfer",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3247,10 +4163,12 @@
         "sale#0"
       ]
     },
-    "492": {
+    "569": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3261,16 +4179,18 @@
         "sale#0 (copy)"
       ]
     },
-    "493": {
+    "570": {
       "op": "gtxns AssetAmount",
       "defined_out": [
         "i#0",
         "sale#0",
-        "tmp%12#1",
-        "tmp%16#1"
+        "tmp%21#0",
+        "tmp%25#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3278,14 +4198,16 @@
         "i#0",
         "i#0",
         "sale#0",
-        "tmp%16#1"
+        "tmp%25#0"
       ]
     },
-    "495": {
+    "572": {
       "error": "a close-out follows a real sale",
       "op": "assert // a close-out follows a real sale",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3295,10 +4217,12 @@
         "sale#0"
       ]
     },
-    "496": {
+    "573": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3309,16 +4233,18 @@
         "sale#0 (copy)"
       ]
     },
-    "497": {
+    "574": {
       "op": "gtxns XferAsset",
       "defined_out": [
         "i#0",
         "sale#0",
-        "tmp%12#1",
-        "tmp%18#1"
+        "tmp%21#0",
+        "tmp%27#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3326,68 +4252,77 @@
         "i#0",
         "i#0",
         "sale#0",
-        "tmp%18#1"
+        "tmp%27#0"
       ]
     },
-    "499": {
+    "576": {
       "op": "uncover 2",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
         "sale#0",
-        "tmp%18#1",
+        "tmp%27#0",
         "i#0"
       ]
     },
-    "501": {
+    "578": {
       "op": "gtxns XferAsset",
       "defined_out": [
         "i#0",
         "sale#0",
-        "tmp%12#1",
-        "tmp%18#1",
-        "tmp%19#1"
+        "tmp%21#0",
+        "tmp%27#0",
+        "tmp%28#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
         "sale#0",
-        "tmp%18#1",
-        "tmp%19#1"
+        "tmp%27#0",
+        "tmp%28#0"
       ]
     },
-    "503": {
+    "580": {
       "op": "==",
       "defined_out": [
         "i#0",
         "sale#0",
-        "tmp%12#1",
-        "tmp%20#0"
+        "tmp%21#0",
+        "tmp%27#0",
+        "tmp%29#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
         "sale#0",
-        "tmp%20#0"
+        "tmp%29#0"
       ]
     },
-    "504": {
+    "581": {
       "error": "a close-out follows its sale",
       "op": "assert // a close-out follows its sale",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3396,58 +4331,68 @@
         "sale#0"
       ]
     },
-    "505": {
+    "582": {
       "op": "gtxns AssetReceiver",
       "defined_out": [
         "i#0",
-        "tmp%12#1",
-        "tmp%22#1"
+        "tmp%21#0",
+        "tmp%27#0",
+        "tmp%31#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
-        "tmp%22#1"
+        "tmp%31#1"
       ]
     },
-    "507": {
-      "op": "dig 6",
+    "584": {
+      "op": "dig 8",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
-        "tmp%22#1",
-        "tmp%12#1"
+        "tmp%31#1",
+        "tmp%21#0"
       ]
     },
-    "509": {
+    "586": {
       "op": "==",
       "defined_out": [
         "i#0",
-        "tmp%12#1",
-        "tmp%23#0"
+        "tmp%21#0",
+        "tmp%27#0",
+        "tmp%32#1"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0",
         "i#0",
-        "tmp%23#0"
+        "tmp%32#1"
       ]
     },
-    "510": {
+    "587": {
       "error": "the remainder goes to the same pool",
       "op": "assert // the remainder goes to the same pool",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3455,13 +4400,79 @@
         "i#0"
       ]
     },
-    "511": {
+    "588": {
       "op": "b end_after_if_else@17"
     },
-    "514": {
+    "591": {
+      "block": "end_bool_false@28",
+      "stack_in": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "and_result%1#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "i#0",
+        "and_result%1#0"
+      ]
+    },
+    "592": {
+      "op": "b end_bool_merge@29"
+    },
+    "595": {
+      "block": "end_bool_false@24",
+      "stack_in": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "and_result%0#0"
+      ],
+      "stack_out": [
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
+        "tmp%27#0",
+        "owner#0",
+        "tmp%6#0",
+        "fee#0",
+        "tmp%12#1",
+        "i#0",
+        "and_result%0#0"
+      ]
+    },
+    "596": {
+      "op": "b end_bool_merge@25"
+    },
+    "599": {
       "block": "end_else_body@7",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3475,7 +4486,9 @@
         "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3484,14 +4497,16 @@
         "tmp%12#0"
       ]
     },
-    "515": {
+    "600": {
       "op": "intc_2 // appl",
       "defined_out": [
         "appl",
         "tmp%12#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3501,13 +4516,15 @@
         "appl"
       ]
     },
-    "516": {
+    "601": {
       "op": "==",
       "defined_out": [
         "tmp%24#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3516,11 +4533,13 @@
         "tmp%24#0"
       ]
     },
-    "517": {
+    "602": {
       "error": "only payments, asset transfers and application calls",
       "op": "assert // only payments, asset transfers and application calls",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3528,14 +4547,16 @@
         "i#0"
       ]
     },
-    "518": {
+    "603": {
       "op": "dupn 2",
       "defined_out": [
         "i#0",
         "i#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3545,14 +4566,16 @@
         "i#0 (copy)"
       ]
     },
-    "520": {
+    "605": {
       "op": "gtxns OnCompletion",
       "defined_out": [
         "i#0",
         "tmp%25#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3562,14 +4585,16 @@
         "tmp%25#0"
       ]
     },
-    "522": {
+    "607": {
       "op": "!",
       "defined_out": [
         "i#0",
         "tmp%26#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3579,11 +4604,13 @@
         "tmp%26#0"
       ]
     },
-    "523": {
+    "608": {
       "error": "plain calls only",
       "op": "assert // plain calls only",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3592,14 +4619,16 @@
         "i#0"
       ]
     },
-    "524": {
+    "609": {
       "op": "gtxns ApplicationID",
       "defined_out": [
         "i#0",
         "tmp%27#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3608,10 +4637,12 @@
         "tmp%27#0"
       ]
     },
-    "526": {
+    "611": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3621,14 +4652,16 @@
         "tmp%27#0"
       ]
     },
-    "527": {
+    "612": {
       "op": "bury 6",
       "defined_out": [
         "i#0",
         "tmp%27#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3637,7 +4670,7 @@
         "tmp%27#0"
       ]
     },
-    "529": {
+    "614": {
       "op": "global CurrentApplicationID",
       "defined_out": [
         "i#0",
@@ -3645,7 +4678,9 @@
         "tmp%28#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3655,7 +4690,7 @@
         "tmp%28#0"
       ]
     },
-    "531": {
+    "616": {
       "op": "==",
       "defined_out": [
         "i#0",
@@ -3663,7 +4698,9 @@
         "tmp%29#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3672,10 +4709,12 @@
         "tmp%29#0"
       ]
     },
-    "532": {
+    "617": {
       "op": "bnz end_bool_true@11",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3683,10 +4722,12 @@
         "i#0"
       ]
     },
-    "535": {
+    "620": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3695,8 +4736,8 @@
         "0"
       ]
     },
-    "536": {
-      "op": "bytec_3 // \"exchange\"",
+    "621": {
+      "op": "bytec_0 // \"exchange\"",
       "defined_out": [
         "\"exchange\"",
         "0",
@@ -3704,7 +4745,9 @@
         "tmp%27#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3714,7 +4757,7 @@
         "\"exchange\""
       ]
     },
-    "537": {
+    "622": {
       "op": "app_global_get_ex",
       "defined_out": [
         "i#0",
@@ -3723,7 +4766,9 @@
         "tmp%27#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3733,11 +4778,13 @@
         "maybe_exists%2#0"
       ]
     },
-    "538": {
+    "623": {
       "error": "check self.exchange exists",
       "op": "assert // check self.exchange exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3746,10 +4793,12 @@
         "maybe_value%2#0"
       ]
     },
-    "539": {
+    "624": {
       "op": "dig 5",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3759,7 +4808,7 @@
         "tmp%27#0"
       ]
     },
-    "541": {
+    "626": {
       "op": "==",
       "defined_out": [
         "i#0",
@@ -3767,7 +4816,9 @@
         "tmp%31#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3776,10 +4827,12 @@
         "tmp%31#0"
       ]
     },
-    "542": {
+    "627": {
       "op": "bnz end_bool_true@11",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3787,10 +4840,12 @@
         "i#0"
       ]
     },
-    "545": {
+    "630": {
       "op": "dup",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3799,7 +4854,7 @@
         "i#0 (copy)"
       ]
     },
-    "546": {
+    "631": {
       "op": "gtxns CreatedApplicationID",
       "defined_out": [
         "i#0",
@@ -3807,7 +4862,9 @@
         "tmp%32#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3816,7 +4873,7 @@
         "tmp%32#0"
       ]
     },
-    "548": {
+    "633": {
       "op": "global CurrentApplicationID",
       "defined_out": [
         "i#0",
@@ -3825,7 +4882,9 @@
         "tmp%33#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3835,7 +4894,7 @@
         "tmp%33#0"
       ]
     },
-    "550": {
+    "635": {
       "op": "==",
       "defined_out": [
         "i#0",
@@ -3843,7 +4902,9 @@
         "tmp%34#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3852,10 +4913,12 @@
         "tmp%34#0"
       ]
     },
-    "551": {
+    "636": {
       "op": "bz end_bool_false@12",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3863,10 +4926,12 @@
         "i#0"
       ]
     },
-    "554": {
+    "639": {
       "block": "end_bool_true@11",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3878,7 +4943,9 @@
         "or_result%0#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3887,11 +4954,13 @@
         "or_result%0#0"
       ]
     },
-    "555": {
+    "640": {
       "error": "only this app and the exchange",
       "block": "end_bool_merge@13",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3902,7 +4971,9 @@
       "op": "assert // only this app and the exchange",
       "defined_out": [],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3910,13 +4981,15 @@
         "i#0"
       ]
     },
-    "556": {
+    "641": {
       "op": "b end_after_if_else@17"
     },
-    "559": {
+    "644": {
       "block": "end_bool_false@12",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3928,7 +5001,9 @@
         "or_result%0#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3937,13 +5012,15 @@
         "or_result%0#0"
       ]
     },
-    "560": {
+    "645": {
       "op": "b end_bool_merge@13"
     },
-    "563": {
+    "648": {
       "block": "end_after_for@19",
       "stack_in": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
@@ -3953,49 +5030,57 @@
       "op": "pop",
       "defined_out": [],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "tmp%6#0",
         "fee#0"
       ]
     },
-    "564": {
+    "649": {
       "op": "bury 1",
       "defined_out": [],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "owner#0",
         "fee#0"
       ]
     },
-    "566": {
+    "651": {
       "op": "swap",
       "defined_out": [
         "owner#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "owner#0"
       ]
     },
-    "567": {
+    "652": {
       "callsub": "dust_guard.spendable",
       "op": "callsub spendable",
       "defined_out": [
         "tmp%35#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "tmp%35#0"
       ]
     },
-    "570": {
+    "655": {
       "op": "dig 1",
       "defined_out": [
         "fee#0",
@@ -4003,27 +5088,31 @@
         "tmp%35#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "tmp%35#0",
         "fee#0 (copy)"
       ]
     },
-    "572": {
+    "657": {
       "op": "+",
       "defined_out": [
         "before_fee#0",
         "fee#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0"
       ]
     },
-    "573": {
+    "658": {
       "op": "intc_0 // 0",
       "defined_out": [
         "0",
@@ -4031,15 +5120,17 @@
         "fee#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
         "0"
       ]
     },
-    "574": {
-      "op": "bytec_1 // \"start\"",
+    "659": {
+      "op": "bytec_2 // \"start\"",
       "defined_out": [
         "\"start\"",
         "0",
@@ -4047,7 +5138,9 @@
         "fee#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
@@ -4055,7 +5148,7 @@
         "\"start\""
       ]
     },
-    "575": {
+    "660": {
       "op": "app_global_get_ex",
       "defined_out": [
         "before_fee#0",
@@ -4064,7 +5157,9 @@
         "maybe_value%3#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
@@ -4072,18 +5167,20 @@
         "maybe_exists%3#0"
       ]
     },
-    "576": {
+    "661": {
       "error": "check self.start exists",
       "op": "assert // check self.start exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
         "maybe_value%3#0"
       ]
     },
-    "577": {
+    "662": {
       "op": "dup2",
       "defined_out": [
         "before_fee#0",
@@ -4093,7 +5190,9 @@
         "maybe_value%3#0 (copy)"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
@@ -4102,7 +5201,7 @@
         "maybe_value%3#0 (copy)"
       ]
     },
-    "578": {
+    "663": {
       "op": ">=",
       "defined_out": [
         "before_fee#0",
@@ -4111,7 +5210,9 @@
         "tmp%37#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
@@ -4119,41 +5220,47 @@
         "tmp%37#0"
       ]
     },
-    "579": {
+    "664": {
       "error": "the owner must not end up behind",
       "op": "assert // the owner must not end up behind",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "before_fee#0",
         "maybe_value%3#0"
       ]
     },
-    "580": {
+    "665": {
       "op": "-",
       "defined_out": [
         "fee#0",
         "gain#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0"
       ]
     },
-    "581": {
+    "666": {
       "op": "dig 1",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "fee#0 (copy)"
       ]
     },
-    "583": {
+    "668": {
       "op": "pushint 10000",
       "defined_out": [
         "10000",
@@ -4162,7 +5269,9 @@
         "gain#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4170,7 +5279,7 @@
         "10000"
       ]
     },
-    "586": {
+    "671": {
       "op": "*",
       "defined_out": [
         "fee#0",
@@ -4178,14 +5287,16 @@
         "tmp%39#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "tmp%39#0"
       ]
     },
-    "587": {
+    "672": {
       "op": "dig 1",
       "defined_out": [
         "fee#0",
@@ -4194,7 +5305,9 @@
         "tmp%39#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4202,7 +5315,7 @@
         "gain#0 (copy)"
       ]
     },
-    "589": {
+    "674": {
       "op": "pushint 100",
       "defined_out": [
         "100",
@@ -4212,7 +5325,9 @@
         "tmp%39#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4221,7 +5336,7 @@
         "100"
       ]
     },
-    "591": {
+    "676": {
       "op": "*",
       "defined_out": [
         "fee#0",
@@ -4230,7 +5345,9 @@
         "tmp%40#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4238,7 +5355,7 @@
         "tmp%40#0"
       ]
     },
-    "592": {
+    "677": {
       "op": "<=",
       "defined_out": [
         "fee#0",
@@ -4246,34 +5363,40 @@
         "tmp%41#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "tmp%41#0"
       ]
     },
-    "593": {
+    "678": {
       "error": "fee over 1%",
       "op": "assert // fee over 1%",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0"
       ]
     },
-    "594": {
+    "679": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "0"
       ]
     },
-    "595": {
+    "680": {
       "op": "bytec 4 // \"iterations\"",
       "defined_out": [
         "\"iterations\"",
@@ -4282,7 +5405,9 @@
         "gain#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4290,7 +5415,7 @@
         "\"iterations\""
       ]
     },
-    "597": {
+    "682": {
       "op": "app_global_get_ex",
       "defined_out": [
         "fee#0",
@@ -4299,7 +5424,9 @@
         "maybe_value%5#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4307,18 +5434,20 @@
         "maybe_exists%5#0"
       ]
     },
-    "598": {
+    "683": {
       "error": "check self.iterations exists",
       "op": "assert // check self.iterations exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "maybe_value%5#0"
       ]
     },
-    "599": {
+    "684": {
       "op": "intc_1 // 1",
       "defined_out": [
         "1",
@@ -4327,7 +5456,9 @@
         "maybe_value%5#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4335,7 +5466,7 @@
         "1"
       ]
     },
-    "600": {
+    "685": {
       "op": "+",
       "defined_out": [
         "fee#0",
@@ -4343,17 +5474,21 @@
         "tmp%42#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "tmp%42#0"
       ]
     },
-    "601": {
+    "686": {
       "op": "bytec 4 // \"iterations\"",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4361,10 +5496,12 @@
         "\"iterations\""
       ]
     },
-    "603": {
+    "688": {
       "op": "swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4372,26 +5509,30 @@
         "tmp%42#0"
       ]
     },
-    "604": {
+    "689": {
       "op": "app_global_put",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0"
       ]
     },
-    "605": {
+    "690": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "0"
       ]
     },
-    "606": {
+    "691": {
       "op": "bytec 5 // \"returned\"",
       "defined_out": [
         "\"returned\"",
@@ -4400,7 +5541,9 @@
         "gain#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4408,7 +5551,7 @@
         "\"returned\""
       ]
     },
-    "608": {
+    "693": {
       "op": "app_global_get_ex",
       "defined_out": [
         "fee#0",
@@ -4417,7 +5560,9 @@
         "maybe_value%6#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
@@ -4425,31 +5570,37 @@
         "maybe_exists%6#0"
       ]
     },
-    "609": {
+    "694": {
       "error": "check self.returned exists",
       "op": "assert // check self.returned exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "gain#0",
         "maybe_value%6#0"
       ]
     },
-    "610": {
+    "695": {
       "op": "swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "maybe_value%6#0",
         "gain#0"
       ]
     },
-    "611": {
+    "696": {
       "op": "dig 2",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "maybe_value%6#0",
@@ -4457,7 +5608,7 @@
         "fee#0 (copy)"
       ]
     },
-    "613": {
+    "698": {
       "op": "-",
       "defined_out": [
         "fee#0",
@@ -4465,64 +5616,76 @@
         "tmp%43#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "maybe_value%6#0",
         "tmp%43#0"
       ]
     },
-    "614": {
+    "699": {
       "op": "+",
       "defined_out": [
         "fee#0",
         "tmp%44#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "tmp%44#0"
       ]
     },
-    "615": {
+    "700": {
       "op": "bytec 5 // \"returned\"",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "tmp%44#0",
         "\"returned\""
       ]
     },
-    "617": {
+    "702": {
       "op": "swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "\"returned\"",
         "tmp%44#0"
       ]
     },
-    "618": {
+    "703": {
       "op": "app_global_put",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0"
       ]
     },
-    "619": {
+    "704": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "0"
       ]
     },
-    "620": {
+    "705": {
       "op": "bytec 6 // \"fees\"",
       "defined_out": [
         "\"fees\"",
@@ -4530,14 +5693,16 @@
         "fee#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "0",
         "\"fees\""
       ]
     },
-    "622": {
+    "707": {
       "op": "app_global_get_ex",
       "defined_out": [
         "fee#0",
@@ -4545,88 +5710,104 @@
         "maybe_value%7#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "maybe_value%7#0",
         "maybe_exists%7#0"
       ]
     },
-    "623": {
+    "708": {
       "error": "check self.fees exists",
       "op": "assert // check self.fees exists",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "maybe_value%7#0"
       ]
     },
-    "624": {
+    "709": {
       "op": "dig 1",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "maybe_value%7#0",
         "fee#0 (copy)"
       ]
     },
-    "626": {
+    "711": {
       "op": "+",
       "defined_out": [
         "fee#0",
         "tmp%45#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "tmp%45#0"
       ]
     },
-    "627": {
+    "712": {
       "op": "bytec 6 // \"fees\"",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "tmp%45#0",
         "\"fees\""
       ]
     },
-    "629": {
+    "714": {
       "op": "swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "\"fees\"",
         "tmp%45#0"
       ]
     },
-    "630": {
+    "715": {
       "op": "app_global_put",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0"
       ]
     },
-    "631": {
-      "op": "bytec_0 // \"owner\"",
+    "716": {
+      "op": "bytec_1 // \"owner\"",
       "defined_out": [
         "\"owner\"",
         "fee#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "\"owner\""
       ]
     },
-    "632": {
+    "717": {
       "op": "global ZeroAddress",
       "defined_out": [
         "\"owner\"",
@@ -4634,111 +5815,135 @@
         "tmp%46#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "\"owner\"",
         "tmp%46#0"
       ]
     },
-    "634": {
+    "719": {
       "op": "app_global_put",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0"
       ]
     },
-    "635": {
-      "op": "bytec_1 // \"start\"",
+    "720": {
+      "op": "bytec_2 // \"start\"",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "\"start\""
       ]
     },
-    "636": {
+    "721": {
       "op": "intc_0 // 0",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0",
         "\"start\"",
         "0"
       ]
     },
-    "637": {
+    "722": {
       "op": "app_global_put",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "fee#0"
       ]
     },
-    "638": {
+    "723": {
       "op": "itob",
       "defined_out": [
         "aggregate%val_as_bytes%0#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "639": {
+    "724": {
       "op": "pushbytes 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
         "aggregate%val_as_bytes%0#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "aggregate%val_as_bytes%0#0",
         "0x151f7c75"
       ]
     },
-    "645": {
+    "730": {
       "op": "swap",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "0x151f7c75",
         "aggregate%val_as_bytes%0#0"
       ]
     },
-    "646": {
+    "731": {
       "op": "concat",
       "defined_out": [
         "tmp%2#0"
       ],
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "tmp%2#0"
       ]
     },
-    "647": {
+    "732": {
       "op": "log",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0"
       ]
     },
-    "648": {
+    "733": {
       "op": "intc_1 // 1",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0",
         "1"
       ]
     },
-    "649": {
+    "734": {
       "op": "return",
       "stack_out": [
-        "tmp%12#1",
+        "tmp%21#0",
+        "other#0",
+        "paired#0",
         "tmp%27#0"
       ]
     }

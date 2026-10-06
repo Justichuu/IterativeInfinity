@@ -2,6 +2,7 @@
 
     .venv/Scripts/python.exe tests/fuzz_guard.py TRIALS [APPROVAL.bin]     random groups
     .venv/Scripts/python.exe tests/fuzz_guard.py -3 [APPROVAL.bin]         every group of up to 3 shapes
+    add --testnet to fuzz on TestNet, where a second token and a token/token pool add a 17th shape
 
 Nothing is deployed, signed or submitted. Each trial creates the guard inside its own simulated group
 (as group.py's witness run does), so any compiled approval program can be fuzzed, old or new.
@@ -22,9 +23,10 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from algosdk import encoding, transaction
+from algosdk import account, encoding, transaction
 from algosdk.v2client import algod
-from tinyman.v2.client import TinymanV2MainnetClient
+from tinyman.assets import AssetAmount
+from tinyman.v2.client import TinymanV2MainnetClient, TinymanV2TestnetClient
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import group, scan  # noqa: E402
@@ -40,7 +42,40 @@ def get(url):
     return json.load(urllib.request.urlopen(url, timeout=20))
 
 
-def setup():
+def setup(network='mainnet'):
+    return setup_testnet() if network == 'testnet' else setup_mainnet()
+
+
+def setup_testnet():
+    """TestNet: the seller from deploy_testnet.py holds DUST and DUST2; DUST2/DUST is a token/token pool."""
+    import deploy_testnet as d
+    s = json.loads(d.STATE.read_text())
+    client = algod.AlgodClient('', d.ALGOD)
+    me_key, seller_key = d.key_for('TESTNET_MNEMONIC'), d.key_for('TESTNET_SELLER_MNEMONIC')
+    me, o = account.address_from_private_key(me_key), account.address_from_private_key(seller_key)
+    sp = client.suggested_params()
+    held = {a['asset-id']: a['amount'] for a in client.account_info(o).get('assets', [])}
+    for token, target in ((s['token'], 50_000), (s['token2'], 5_000)):     # top up only below a target, so
+        if token not in held:                                               # parallel runs see one balance
+            d.send(client, [transaction.AssetTransferTxn(o, sp, o, 0, token)], seller_key)
+        if held.get(token, 0) < target:
+            d.send(client, [transaction.AssetTransferTxn(me, sp, o, target - held.get(token, 0), token)], me_key)
+    owner = client.account_info(o)
+    bal = {a['asset-id']: a['amount'] for a in owner['assets']}
+    tiny = TinymanV2TestnetClient(algod_client=client, user_address=o)
+    whole, _ = group.token_legs(tiny, o, s['token'], bal[s['token']], sp)
+    part, _ = group.token_legs(tiny, o, s['token'], bal[s['token']] // 2, sp)
+    pool2 = tiny.fetch_pool(s['token2'], s['token'])
+    q = pool2.fetch_fixed_input_swap_quote(AssetAmount(next(x for x in (pool2.asset_1, pool2.asset_2) if x.id == s['token2']),
+                                                       bal[s['token2']]), slippage=0.05)
+    x_for_d = pool2.prepare_swap_transactions_from_quote(q, user_address=o, suggested_params=sp).transactions
+    return dict(client=client, algod=d.ALGOD + '/v2', owner=o, auth=owner.get('auth-addr'), fee_to=s['fee_address'],
+                thief=me, token=s['token'], token2=s['token2'], other=s['token2'], balance=bal[s['token']],
+                balance2=bal[s['token2']], pool=whole[0].receiver, exchange=tiny.validator_app_id, sp=sp,
+                whole=whole[:2], part=part[:2], x_for_d=x_for_d)
+
+
+def setup_mainnet():
     client = algod.AlgodClient('', scan.ALGOD.rsplit('/v2', 1)[0])
     holders = get(f'{INDEXER}/assets/{TOKEN}/balances?currency-greater-than=100000000&limit=40')['balances']
     accts = [client.account_info(h['address']) for h in holders]
@@ -52,15 +87,16 @@ def setup():
     tiny = TinymanV2MainnetClient(algod_client=client, user_address=o)
     whole, _ = group.token_legs(tiny, o, TOKEN, balance, sp)
     part, _ = group.token_legs(tiny, o, TOKEN, balance // 2, sp)
-    return dict(client=client, owner=o, auth=owner.get('auth-addr'), fee_to=fee_to, thief=thief,
-                balance=balance, pool=whole[0].receiver, exchange=tiny.validator_app_id, sp=sp,
-                whole=whole[:2], part=part[:2], opted_other=any(a['asset-id'] == OTHER for a in owner['assets']))
+    return dict(client=client, algod=scan.ALGOD, owner=o, auth=owner.get('auth-addr'), fee_to=fee_to, thief=thief,
+                token=TOKEN, other=OTHER, balance=balance, pool=whole[0].receiver, exchange=tiny.validator_app_id,
+                sp=sp, whole=whole[:2], part=part[:2])
 
 
 def shapes(c):
     """Named lists of transactions the generator draws from: honest and thieving."""
     o, sp, P, T, F = c['owner'], c['sp'], c['pool'], c['thief'], c['fee_to']
-    axfer = lambda to, amt, close=None, asset=TOKEN: transaction.AssetTransferTxn(o, sp, to, amt, asset, close_assets_to=close)
+    D, OTHER_ = c['token'], c['other']
+    axfer = lambda to, amt, close=None, asset=D: transaction.AssetTransferTxn(o, sp, to, amt, asset, close_assets_to=close)
     pay = lambda to, amt, close=None: transaction.PaymentTxn(o, sp, to, amt, close_remainder_to=close)
     return {
         'sale_whole': lambda: copy.deepcopy(c['whole']),
@@ -76,12 +112,12 @@ def shapes(c):
         'fee_zero': lambda: [pay(F, 0)],
         'algo_to_thief': lambda: [pay(T, 1_000)],
         'close_account_to_thief': lambda: [pay(F, 0, T)],
-        'opt_in_other': lambda: [axfer(o, 0, asset=OTHER)],
+        'opt_in_other': lambda: [axfer(o, 0, asset=OTHER_)],
         'other_app': lambda: [transaction.ApplicationCreateTxn(o, sp, transaction.OnComplete.NoOpOC, ALWAYS_YES,
                               ALWAYS_YES, transaction.StateSchema(0, 0), transaction.StateSchema(0, 0))],
         'asset_create': lambda: [transaction.AssetConfigTxn(o, sp, total=1, decimals=0, default_frozen=False,
                                  unit_name='X', asset_name='X', strict_empty_address_check=False)],
-    }
+    } | ({'swap_token_for_token': lambda: copy.deepcopy(c['x_for_d'])} if 'x_for_d' in c else {})
 
 
 def generate(rng, c, library, approval, clear, app_id, names=None):
@@ -130,7 +166,7 @@ def judge(c, txns, result):
     begin = next((i for i, t in enumerate(txns) if getattr(t, 'app_args', None) and t.app_args[:1] ==
                   [group.abi.Method.from_signature('begin()void').get_selector()]), 0)
     sent, fee, gain, why = 0, 0, 0, []
-    held = {TOKEN: c['balance']}
+    held = {c['token']: c['balance'], **({c['token2']: c['balance2']} if 'token2' in c else {})}
     results = result['txn-results']
     for i, t in enumerate(txns):
         if getattr(t, 'rekey_to', None):
@@ -164,6 +200,10 @@ def judge(c, txns, result):
         elif isinstance(t, transaction.ApplicationCallTxn):
             inner = results[i]['txn-result'].get('inner-txns', [])
             gain += paid_to(o, inner)
+            for x in inner:                                 # tokens an app sends the owner arrive in the holding
+                tx = x['txn']['txn']
+                if tx.get('type') == 'axfer' and tx.get('arcv') == o:
+                    held[tx['xaid']] = held.get(tx['xaid'], 0) + tx.get('aamt', 0)
             if isinstance(t, transaction.ApplicationCreateTxn) and i > begin:
                 gain -= scan.SLOT                           # an app the owner creates locks 0.1 ALGO
         elif isinstance(t, transaction.AssetConfigTxn) and i > begin:
@@ -177,7 +217,8 @@ def trial(c, library, approval, clear, seed, names=None):
     for attempt in range(5):
         try:
             round_ = c['client'].status()['last-round']
-            names_, txns = generate(random.Random(seed), c, library, approval, clear, group.next_app_id(round_), names)
+            names_, txns = generate(random.Random(seed), c, library, approval, clear,
+                                    group.next_app_id(round_, c['algod']), names)
             transaction.assign_group_id(txns)
             failure, at, result = group.simulate(c['client'], txns, c['auth'], round_)
             accepted = failure is None
@@ -190,11 +231,11 @@ def trial(c, library, approval, clear, seed, names=None):
     return dict(seed=seed, error=last)
 
 
-def main(n, approval_path=None):
+def main(n, approval_path=None, network='mainnet'):
     """n > 0: n random trials. n < 0: every sequence of 1 to -n shapes, exhaustively."""
     approval = Path(approval_path).read_bytes() if approval_path else (group.ARTIFACTS / 'DustGuard.approval.bin').read_bytes()
     clear = (group.ARTIFACTS / 'DustGuard.clear.bin').read_bytes()
-    c = setup()
+    c = setup(network)
     library = shapes(c)
     if n > 0:
         jobs = [(s, None) for s in range(n)]
@@ -217,4 +258,5 @@ def main(n, approval_path=None):
 
 
 if __name__ == '__main__':
-    main(int(sys.argv[1]), *sys.argv[2:3]) if len(sys.argv) >= 2 else sys.exit(__doc__)
+    args = [a for a in sys.argv[1:] if a != '--testnet']
+    main(int(args[0]), args[1] if len(args) > 1 else None, 'testnet' if '--testnet' in sys.argv else 'mainnet')         if args else sys.exit(__doc__)

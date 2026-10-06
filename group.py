@@ -106,9 +106,9 @@ def measured(g):
     return {k: vals.get(k, 0) for k in ('returned', 'fees')}
 
 
-def next_app_id(round_):
+def next_app_id(round_, algod_v2=scan.ALGOD):
     """The id a creation would get in the block after `round_`: that block's txn counter plus one."""
-    url = f'{scan.ALGOD}/blocks/{round_}?header-only=true'
+    url = f'{algod_v2}/blocks/{round_}?header-only=true'
     return json.load(urllib.request.urlopen(url, timeout=20))['block']['tc'] + 1
 
 
