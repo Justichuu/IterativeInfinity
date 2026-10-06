@@ -22,7 +22,8 @@ what code enforces and what it does not.
 * Every transaction is the owner's own, and none rekeys (hands their signing to another key).
 * This contract holds nothing and sends nothing: it has no inner transactions at all.
 * It cannot be updated or deleted, so none of the above can be swapped out later.
-* Public totals: sweeps, ALGO returned to owners, fees taken, in global state for anyone to read.
+* Public totals: iterations (one per refereed sale), ALGO returned to owners, fees taken, in global
+  state for anyone to read.
 
 **Not enforced by code.** A page could build a sale without calling this contract; the wallet shows
 every transaction before signing, and a group with no ``begin`` and ``end`` is not refereed. Prices
@@ -51,7 +52,7 @@ class DustGuard(ARC4Contract):
         self.exchange = GlobalState(UInt64)
         self.owner = GlobalState(Account)
         self.start = GlobalState(UInt64)
-        self.sweeps = GlobalState(UInt64)
+        self.iterations = GlobalState(UInt64)
         self.returned = GlobalState(UInt64)
         self.fees = GlobalState(UInt64)
 
@@ -61,7 +62,7 @@ class DustGuard(ARC4Contract):
         self.exchange.value = exchange
         self.owner.value = Global.zero_address
         self.start.value = UInt64(0)
-        self.sweeps.value = UInt64(0)
+        self.iterations.value = UInt64(0)
         self.returned.value = UInt64(0)
         self.fees.value = UInt64(0)
 
@@ -109,7 +110,7 @@ class DustGuard(ARC4Contract):
         assert before_fee >= self.start.value, "the owner must not end up behind"
         gain = before_fee - self.start.value
         assert fee * BPS <= gain * FEE_BPS, "fee over 1%"
-        self.sweeps.value += 1
+        self.iterations.value += 1
         self.returned.value += gain - fee
         self.fees.value += fee
         self.owner.value = Global.zero_address

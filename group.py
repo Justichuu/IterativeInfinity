@@ -62,8 +62,9 @@ def token_legs(client, owner, asset_id, amount, params):
     return [*swap.transactions, close], quote.amount_out_with_slippage.amount
 
 
-def groups(client, owner, fee_address, sells, params, app_id, witness):
-    """Chunk the sales so begin, fee, end (and a witness run's create) fit the protocol limit."""
+def groups(client, owner, fee_address, sells, params, app_id, witness, holder):
+    """Chunk the sales so begin, fee, end (and a witness run's create) fit the protocol limit.
+    A holder of anything the fee address created pays no fee."""
     overhead = 3 + witness
     per_group = (GROUP_MAX - overhead) // PER_TOKEN
     for start in range(0, len(sells), per_group):
@@ -77,7 +78,7 @@ def groups(client, owner, fee_address, sells, params, app_id, witness):
             legs += txns
             gain += out + scan.SLOT
         network = sum(t.fee for t in legs) + overhead * NETWORK_FEE   # the owner pays every fee in the group
-        fee = fee_for(gain - network)
+        fee = 0 if holder else fee_for(gain - network)
         pay = [transaction.PaymentTxn(owner, params, fee_address, fee, note=b'dustbank 1%')] if fee else []
         head = [create_guard(owner, params, fee_address, client.validator_app_id)] if witness else []
         txns = head + [call(owner, params, app_id, 'begin()void'), *legs, *pay, call(owner, params, app_id, 'end()uint64')]
@@ -127,7 +128,8 @@ def main(name, fee_address, app):
         tiny = TinymanV2MainnetClient(algod_client=client, user_address=owner)
         round_ = client.status()['last-round']
         app_id = next_app_id(round_) if witness else int(app)
-        for txns, gain, fee in groups(tiny, owner, fee_address, sells, params, app_id, witness):
+        holder = any(r['creator'] == fee_address and held.get(r['id']) for r in rows)
+        for txns, gain, fee in groups(tiny, owner, fee_address, sells, params, app_id, witness, holder):
             failure, at, g = simulate(client, txns, acct.get('auth-addr'), round_)
             seen = measured(g) if not failure else None
             print(f'{len(txns):>2} txns  estimate: owner nets {(gain - fee) / 1e6:.6f} ALGO, fee {fee / 1e6:.6f}  '

@@ -57,6 +57,7 @@ def scan(addrs):
         usd = float(pera['usd_value']) * amount if pera.get('usd_value') else None
         return {'id': i, 'name': pera.get('name') or params.get('name'), 'amount': amount, 'usd': usd,
                 'tier': pera.get('verification_tier'), 'collectible': bool(pera.get('is_collectible')),
+                'creator': params.get('creator'),
                 'frozen': i in frozen, 'shapes': shapes(params, pera)}
 
     with cf.ThreadPoolExecutor(8) as ex:
