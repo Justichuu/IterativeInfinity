@@ -64,7 +64,8 @@ def token_legs(client, owner, asset_id, amount, params):
 
 def groups(client, owner, fee_address, sells, params, app_id, witness, holder):
     """Chunk the sales so begin, fee, end (and a witness run's create) fit the protocol limit.
-    A holder of anything the fee address created pays no fee."""
+    A holder of anything the fee address created pays no fee. `app_id` may be a function, called once
+    each group's quotes are in, so a witness run can predict the app id at a fresh round."""
     overhead = 3 + witness
     per_group = (GROUP_MAX - overhead) // PER_TOKEN
     for start in range(0, len(sells), per_group):
@@ -81,7 +82,8 @@ def groups(client, owner, fee_address, sells, params, app_id, witness, holder):
         fee = 0 if holder else fee_for(gain - network)
         pay = [transaction.PaymentTxn(owner, params, fee_address, fee, note=b'dustbank 1%')] if fee else []
         head = [create_guard(owner, params, fee_address, client.validator_app_id)] if witness else []
-        txns = head + [call(owner, params, app_id, 'begin()void'), *legs, *pay, call(owner, params, app_id, 'end()uint64')]
+        app = app_id() if callable(app_id) else app_id
+        txns = head + [call(owner, params, app, 'begin()void'), *legs, *pay, call(owner, params, app, 'end()uint64')]
         for t in txns:
             t.group = None
         yield transaction.assign_group_id(txns), gain - network, fee
@@ -126,11 +128,15 @@ def main(name, fee_address, app):
         if not sells:
             continue
         tiny = TinymanV2MainnetClient(algod_client=client, user_address=owner)
-        round_ = client.status()['last-round']
-        app_id = next_app_id(round_) if witness else int(app)
+        pin = {}                                     # the round each witness group is simulated at
+
+        def fresh():
+            pin['round'] = client.status()['last-round']
+            return next_app_id(pin['round'])
         holder = any(r['creator'] == fee_address and held.get(r['id']) for r in rows)
-        for txns, gain, fee in groups(tiny, owner, fee_address, sells, params, app_id, witness, holder):
-            failure, at, g = simulate(client, txns, acct.get('auth-addr'), round_)
+        for txns, gain, fee in groups(tiny, owner, fee_address, sells, params, fresh if witness else int(app),
+                                      witness, holder):
+            failure, at, g = simulate(client, txns, acct.get('auth-addr'), pin.get('round'))
             seen = measured(g) if not failure else None
             print(f'{len(txns):>2} txns  estimate: owner nets {(gain - fee) / 1e6:.6f} ALGO, fee {fee / 1e6:.6f}  '
                   f'simulate: {"OK" if not failure else f"FAILED at {at}: {failure}"}'

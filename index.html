@@ -45,7 +45,8 @@ code{overflow-wrap:anywhere}
 <main>
 <section>
 <p>Sell the dust tokens in your Algorand wallet for ALGO. Each token is closed out too, which frees the 0.1 ALGO it was locking. You sign everything in your own wallet; nobody else ever holds your coins.</p>
-<p>The fee is 1%. A contract on chain checks every sale and refuses a bigger fee, or any sale that leaves you behind. Holders of Iterative Infinity pay nothing.</p>
+<p>The fee is 1%. A contract on chain checks every sale and refuses a bigger fee, or any sale that would leave you with less ALGO than you started with. Holders of Iterative Infinity pay nothing.</p>
+<p>The contract does not judge prices. This page refuses to sell more than 1% under Tinyman's quote, and Pera shows you each minimum before you sign.</p>
 <p class="net" id="net">TestNet: its ALGO has no value. MainNet: not deployed yet.</p>
 <form id="look"><label for="who">Wallet address or NFD name</label>
 <input id="who" autocomplete="off" spellcheck="false" placeholder="ABC…XYZ or name.algo" required>
@@ -62,8 +63,8 @@ code{overflow-wrap:anywhere}
 <section>
 <h2>The referee, in public</h2>
 <p id="totals">Loading…</p>
-<p>What it enforces in code: the fee is at most 1% of what you gained, measured on chain; you come out ahead or nothing happens; every token you send goes into a Tinyman sale, and the only ALGO you send is the fee; no other app, no rekey, no change to any token's settings. It holds nothing, sends nothing, and can never be changed or deleted.</p>
-<p>What it cannot enforce: a page could build a sale without it. Check that the first and last steps your wallet shows call app <a id="applink"></a>.</p>
+<p>What it enforces in code: the fee is at most 1% of what you gained, measured on chain; you never end with less ALGO, or nothing happens; every token you send goes into a Tinyman swap of your whole balance, and the only ALGO you send is the fee; no other app, no rekey, no clawback, no change to any token's settings. It holds nothing, sends nothing, and can never be changed or deleted.</p>
+<p>What it cannot enforce: the price, and a page could build a sale without it. Check that the first and last steps your wallet shows call app <a id="applink"></a>.</p>
 </section>
 </main>
 <footer><p class="net">Source, tests and the contract: <a href="https://github.com/Justichuu/IterativeInfinity">github.com/Justichuu/IterativeInfinity</a></p></footer>

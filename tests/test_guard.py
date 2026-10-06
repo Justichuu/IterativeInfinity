@@ -36,13 +36,14 @@ def chain():
                 app=group.next_app_id(round_), params=client.suggested_params())
 
 
-def build(c, fee_bps=group.FEE_BPS, tamper=None, end=True):
-    """One witness-run group selling 100 Defly (6 decimals) of the owner's balance; `tamper` edits it."""
+def build(c, fee_bps=group.FEE_BPS, tamper=None, end=True, amount=100_000_000, close=False):
+    """One witness-run group selling `amount` Defly (6 decimals; default 100) of the owner's balance,
+    keeping the holding unless `close`; `tamper` edits it."""
     o = c['owner']['address']
     tiny = TinymanV2MainnetClient(algod_client=c['client'], user_address=o)
-    legs, out = group.token_legs(tiny, o, TOKEN, 100_000_000, c["params"])
-    legs = legs[:2]                                   # keep the holding: the swap alone, no close-out
-    gain = out - sum(t.fee for t in legs) - 4 * group.NETWORK_FEE
+    legs, out = group.token_legs(tiny, o, TOKEN, amount, c["params"])
+    legs = legs if close else legs[:2]                # the swap alone keeps the holding
+    gain = out + (scan.SLOT if close else 0) - sum(t.fee for t in legs) - 4 * group.NETWORK_FEE
     fee = gain * fee_bps // 10_000
     txns = [group.create_guard(o, c['params'], c['fee_to'], tiny.validator_app_id), group.call(o, c['params'], c['app'], 'begin()void'),
             *legs, transaction.PaymentTxn(o, c['params'], c['fee_to'], fee)]
@@ -111,6 +112,41 @@ def test_a_call_to_another_app_fails_at_end(chain):
             transaction.StateSchema(0, 0), transaction.StateSchema(0, 0)))
     failure, at, n = build(chain, tamper=other)
     assert failure and at == [n - 1]
+
+
+def test_a_decoy_close_out_to_a_stranger_fails_at_begin(chain):
+    """A zero transfer to a stranger, then a close-out of the whole balance to that stranger."""
+    def decoy(txns, c):
+        o, sp = c['owner']['address'], c['params']
+        txns[2:-1] = [transaction.AssetTransferTxn(o, sp, c['third'], 0, TOKEN),
+                      transaction.PaymentTxn(o, sp, c['fee_to'], 0),
+                      transaction.AssetTransferTxn(o, sp, c['third'], 0, TOKEN, close_assets_to=c['third'])]
+    failure, at, _ = build(chain, tamper=decoy)
+    assert failure and at == [1]                      # begin: a "sale" of 0 is not the whole balance
+
+
+def test_a_partial_sale_then_close_out_fails_at_begin(chain):
+    """Sell 100 Defly, then close the rest out to the pool: the remainder would be given away."""
+    def partial(txns, c):
+        pool = txns[2].receiver
+        txns.insert(4, transaction.AssetTransferTxn(c['owner']['address'], c['params'], pool, 0, TOKEN,
+                                                    close_assets_to=pool))
+    failure, at, _ = build(chain, tamper=partial)
+    assert failure and at == [1]
+
+
+def test_tinyman_refuses_a_sale_whose_tokens_go_to_a_stranger(chain):
+    """The floor under the guard: Tinyman's swap must check its input went to the pool."""
+    def stranger(txns, c):
+        txns[2].receiver = c['third']
+    failure, _, _ = build(chain, tamper=stranger)
+    assert failure
+
+
+def test_an_honest_whole_balance_sale_with_close_out_passes(chain):
+    balance = next(a['amount'] for a in chain['owner']['assets'] if a['asset-id'] == TOKEN)
+    failure, _, _ = build(chain, amount=balance, close=True)
+    assert failure is None
 
 
 def test_a_group_without_end_fails_at_begin(chain):

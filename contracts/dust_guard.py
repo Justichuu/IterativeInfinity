@@ -9,15 +9,21 @@ what code enforces and what it does not.
 
 * The fee is at most 1% of what the owner gained, measured as their spendable ALGO (balance minus
   minimum balance) at ``end`` against ``begin``. ``FEE_BPS`` is a constant, not state.
-* The owner comes out ahead or the whole group fails.
+* The owner does not end with less spendable ALGO, or the whole group fails. This is ALGO only: the
+  guard does not know what a token is worth, so a sale's price is protected by the minimum output
+  the page sets and the wallet shows, not by this contract.
 * ``begin`` is first and ``end`` is last, so nothing can happen outside the measurement.
 * Only three kinds of transaction may appear: payments, asset transfers and plain application calls.
   No asset configuration (which could hand away an asset's manager or clawback role), no freeze, no
   key registration, no opt-out of an app.
 * The only ALGO the owner may send is one fee payment, to the fee address fixed at creation.
 * Every token the owner sends goes into a Tinyman sale: each transfer with an amount is followed by a
-  call to the exchange fixed at creation, which checks the transfer goes to its pool. A close-out
-  sends any remainder to that same pool. So no coin can reach the operator or anyone else.
+  ``swap`` call to the exchange fixed at creation, which checks the transfer goes to its pool.
+* A close-out must follow a sale of the owner's whole balance of that token, measured at ``begin``,
+  and closes to that sale's pool. So the remainder it moves is zero: nothing is given away, and no
+  coin can reach the operator or anyone else. (Before 6 Oct, app 773797597 on TestNet allowed a
+  zero "sale" before a close-out, which let a close-out send a whole balance to any address.)
+* No clawback transfers: the owner cannot be made to move someone else's tokens.
 * The only applications called are this one and the exchange.
 * Every transaction is the owner's own, and none rekeys (hands their signing to another key).
 * This contract holds nothing and sends nothing: it has no inner transactions at all.
@@ -33,8 +39,8 @@ Compile::
 
     puyapy contracts/dust_guard.py --out-dir artifacts --output-bytecode   (out-dir is relative to this file)
 """
-from algopy import (ARC4Contract, Account, Global, GlobalState, OnCompleteAction, TransactionType, Txn, UInt64,
-                    arc4, gtxn, subroutine, urange)
+from algopy import (ARC4Contract, Account, Bytes, Global, GlobalState, OnCompleteAction, TransactionType, Txn,
+                    UInt64, arc4, gtxn, subroutine, urange)
 
 FEE_BPS = 100           # 1%, in basis points (hundredths of a percent)
 BPS = 10_000
@@ -72,6 +78,12 @@ class DustGuard(ARC4Contract):
         last = gtxn.ApplicationCallTransaction(Global.group_size - 1)
         assert last.app_id == Global.current_application_id, "end must close the group"
         assert Txn.sender != self.fee_address.value, "the operator cannot sell to itself"
+        for i in urange(Global.group_size):
+            t = gtxn.Transaction(i)
+            if t.type == TransactionType.AssetTransfer and t.asset_close_to != Global.zero_address:
+                assert i >= 2, "a close-out follows its sale"
+                sale = gtxn.AssetTransferTransaction(i - 2)
+                assert sale.asset_amount == sale.xfer_asset.balance(Txn.sender), "sell the whole balance"
         self.owner.value = Txn.sender
         self.start.value = spendable(Txn.sender)
 
@@ -121,14 +133,15 @@ class DustGuard(ARC4Contract):
     def check_transfer(self, i: UInt64) -> None:
         """A token sent is a Tinyman sale; a close-out returns any remainder to the pool of that sale."""
         t = gtxn.AssetTransferTransaction(i)
+        assert t.asset_sender == Global.zero_address, "no clawback"
         if t.asset_amount > 0:
             assert i + 1 < Global.group_size, "a sale needs the exchange call after it"
-            swap = gtxn.Transaction(i + 1)
-            assert swap.type == TransactionType.ApplicationCall, "a sale needs the exchange call after it"
+            swap = gtxn.ApplicationCallTransaction(i + 1)
             assert swap.app_id.id == self.exchange.value, "a sale needs the exchange call after it"
+            assert swap.app_args(0) == Bytes(b"swap"), "a sale is a swap"
         if t.asset_close_to != Global.zero_address:
             assert i >= 2, "a close-out follows its sale"
-            sale = gtxn.Transaction(i - 2)
-            assert sale.type == TransactionType.AssetTransfer, "a close-out follows its sale"
+            sale = gtxn.AssetTransferTransaction(i - 2)
+            assert sale.asset_amount > 0, "a close-out follows a real sale"
             assert sale.xfer_asset == t.xfer_asset, "a close-out follows its sale"
             assert t.asset_close_to == sale.asset_receiver, "the remainder goes to the same pool"
