@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "type": "module",
+  "description": "The signing page's libraries, pinned. The page loads the same versions from esm.sh; node uses these for tests/page.test.mjs.",
+  "dependencies": {
+    "algosdk": "3.8.0",
+    "@tinymanorg/tinyman-js-sdk": "5.1.4"
+  }
+}

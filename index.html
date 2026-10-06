@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DustBank</title>
+<meta name="description" content="Sell Algorand dust for ALGO in groups you sign. 1% fee, capped by a contract on chain. Iterative Infinity holders pay nothing.">
+<link rel="icon" href="logo.svg">
+<script type="importmap">
+{"imports":{
+"algosdk":"https://esm.sh/algosdk@3.8.0",
+"@tinymanorg/tinyman-js-sdk":"https://esm.sh/@tinymanorg/tinyman-js-sdk@5.1.4?deps=algosdk@3.8.0",
+"@perawallet/connect":"https://esm.sh/@perawallet/connect@1.6.1?deps=algosdk@3.8.0"}}
+</script>
+<style>
+:root{--bg:#f6ecd8;--card:#fffaf0;--ink:#2b1a0c;--soft:#6b5233;--line:#d8c3a0;--accent:#8f5a29;--ok:#2f6b3a;--bad:#9b2c1c}
+@media (prefers-color-scheme:dark){:root{--bg:#1c140d;--card:#271c12;--ink:#f3e6cf;--soft:#c7ae8a;--line:#4a3826;--accent:#e0a868;--ok:#8fd19e;--bad:#f0907e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+main,header,footer{max-width:760px;margin:0 auto;padding:0 16px}
+header{display:flex;gap:16px;align-items:center;padding-top:24px}
+h1{margin:0;font-size:2rem}
+header p{margin:0;color:var(--soft)}
+section,.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:16px 0}
+.net{color:var(--soft);font-size:.9rem}
+form{display:flex;flex-wrap:wrap;gap:8px;align-items:end}
+label{width:100%;font-weight:600}
+input{flex:1;min-width:0;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+button{font:inherit;font-weight:600;padding:10px 16px;border:0;border-radius:8px;background:var(--accent);color:var(--card);cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.big{font-size:1.25rem;font-weight:700}
+.ok{color:var(--ok)}.bad{color:var(--bad)}
+ol{padding-left:1.4em}
+a{color:var(--accent)}
+code{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header><img src="logo.svg" alt="" width="72" height="72"><div><h1>DustBank</h1><p>Iterative Infinity</p></div></header>
+<main>
+<section>
+<p>Sell the dust tokens in your Algorand wallet for ALGO. Each token is closed out too, which frees the 0.1 ALGO it was locking. You sign everything in your own wallet; nobody else ever holds your coins.</p>
+<p>The fee is 1%. A contract on chain checks every sale and refuses a bigger fee, or any sale that leaves you behind. Holders of Iterative Infinity pay nothing.</p>
+<p class="net" id="net">TestNet: its ALGO has no value. MainNet: not deployed yet.</p>
+<form id="look"><label for="who">Wallet address or NFD name</label>
+<input id="who" autocomplete="off" spellcheck="false" placeholder="ABC…XYZ or name.algo" required>
+<button>Look</button></form>
+</section>
+<p id="status" role="status" aria-live="polite"></p>
+<section id="result" hidden>
+<h2>What would happen</h2>
+<div class="scroll"><table><thead><tr><th>Token</th><th class="n">Amount</th><th class="n">Sale pays</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p id="summary"></p>
+<details open><summary>Every step you would sign</summary><ol id="steps"></ol></details>
+<p><button id="sign" disabled>Connect Pera and sign</button></p>
+</section>
+<section>
+<h2>The referee, in public</h2>
+<p id="totals">Loading…</p>
+<p>What it enforces in code: the fee is at most 1% of what you gained, measured on chain; you come out ahead or nothing happens; every token you send goes into a Tinyman sale, and the only ALGO you send is the fee; no other app, no rekey, no change to any token's settings. It holds nothing, sends nothing, and can never be changed or deleted.</p>
+<p>What it cannot enforce: a page could build a sale without it. Check that the first and last steps your wallet shows call app <a id="applink"></a>.</p>
+</section>
+</main>
+<footer><p class="net">Source, tests and the contract: <a href="https://github.com/Justichuu/IterativeInfinity">github.com/Justichuu/IterativeInfinity</a></p></footer>
+<script type="module">
+import { NETWORKS, guardState, plan, resolve, submit, algo } from './sweep.js';
+const network = 'testnet', net = NETWORKS[network], $ = id => document.getElementById(id);
+const short = a => a.slice(0, 6) + '…' + a.slice(-4);
+const units = (n, d) => (Number(n) / 10 ** d).toLocaleString(undefined, { maximumFractionDigits: d });
+let current = null;
+const say = (text, cls = '') => { $('status').textContent = text; $('status').className = cls; };
+
+$('applink').textContent = net.app;
+$('applink').href = `${net.explorer}/application/${net.app}`;
+
+async function totals() {
+  const g = await guardState(net);
+  $('totals').textContent = `${g.iterations} sales refereed. ${algo(g.returned)} ALGO returned to sellers. ${algo(g.fees)} ALGO in fees, paid to ${short(g.fee_address)}.`;
+}
+
+function show(p) {
+  current = p;
+  $('rows').replaceChildren(...p.rows.map(r => {
+    const tr = document.createElement('tr');
+    for (const [v, n] of [[`${r.name} (${r.id})`], [units(r.amount, r.decimals), 1],
+      [r.out === undefined ? '' : `${algo(r.minOut)} to ${algo(r.out)} ALGO`, 1], [r.status]]) {
+      const td = document.createElement('td'); td.textContent = v; if (n) td.className = 'n'; tr.append(td);
+    }
+    return tr;
+  }));
+  const gain = p.groups.reduce((s, g) => s + g.gain, 0n), fee = p.groups.reduce((s, g) => s + g.fee, 0n);
+  const count = p.rows.filter(r => r.status === 'sell').length;
+  $('summary').innerHTML = count
+    ? `<span class="big">You get back at least ${algo(gain - fee)} ALGO</span><br>${count} token${count > 1 ? 's' : ''} sold and closed out, freed deposits added and network fees taken off. DustBank's fee: ${p.holder ? '<b>nothing</b>, you hold Iterative Infinity' : `${algo(fee)} ALGO (1%)`}. ${p.groups.length} signature${p.groups.length > 1 ? 's' : ''}.`
+    : 'Nothing here to sell: no foreign token with a Tinyman pool.';
+  const steps = [];
+  p.groups.forEach((g, i) => {
+    steps.push(`Group ${i + 1}, all or nothing. Referee starts: it notes what you can spend.`);
+    for (const r of p.rows.filter(r => r.status === 'sell').slice(i * 4, i * 4 + 4))
+      steps.push(`Sell ${units(r.amount, r.decimals)} ${r.unit || r.name} on Tinyman for at least ${algo(r.minOut)} ALGO, then close it out to free 0.1 ALGO.`);
+    if (g.fee) steps.push(`Pay the 1% fee, ${algo(g.fee)} ALGO, to ${short(p.guard.fee_address)}.`);
+    steps.push('Referee ends: it checks the fee is at most 1% and you came out ahead, or the whole group fails.');
+  });
+  $('steps').replaceChildren(...steps.map(s => Object.assign(document.createElement('li'), { textContent: s })));
+  $('result').hidden = false;
+  $('sign').disabled = !p.groups.length;
+}
+
+async function look(who) {
+  say('Reading the wallet and asking Tinyman for prices…');
+  try { show(await plan(network, await resolve(who.trim()))); say(''); }
+  catch (e) { say(`Could not read that wallet: ${e.message}`, 'bad'); }
+}
+
+$('look').onsubmit = e => { e.preventDefault(); look($('who').value); };
+
+$('sign').onclick = async () => {
+  $('sign').disabled = true;
+  try {
+    const { PeraWalletConnect } = await import('@perawallet/connect');
+    const pera = new PeraWalletConnect({ chainId: net.chainId });
+    const [who] = await pera.reconnectSession().then(a => a.length ? a : pera.connect());
+    $('who').value = who;
+    say('Getting fresh prices for your wallet…');
+    const p = await plan(network, who); show(p);
+    if (!p.groups.length) return say('Nothing to sell in the connected wallet.');
+    say('Check each step in Pera, then sign.');
+    const signed = await pera.signTransaction(p.groups.map(g => g.txns.map(txn => ({ txn }))));
+    let k = 0;
+    const ids = await submit(network, p.groups.map(g => signed.slice(k, k += g.txns.length)));
+    say(`Done. ${ids.length} group${ids.length > 1 ? 's' : ''} confirmed: ${ids.map(short).join(', ')}.`, 'ok');
+    totals(); look(who);
+  } catch (e) { say(`Nothing was sent: ${e.message}`, 'bad'); $('sign').disabled = false; }
+};
+
+totals().catch(e => { $('totals').textContent = `Could not read the referee: ${e.message}`; });
+const fromLink = new URLSearchParams(location.hash.slice(1)).get('look');
+if (fromLink) { $('who').value = fromLink; look(fromLink); }
+</script>
+</body>
+</html>

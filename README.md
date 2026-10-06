@@ -15,8 +15,9 @@ collectors.
 Everything happens in groups the owner signs in their own wallet: all of a group happens or none of
 it does, and nobody else ever holds the coins. An on-chain referee, DustGuard, checks every group.
 
-**State: nothing is deployed.** The contract is tested against mainnet with algod `simulate`, which
-runs a group against the live chain and submits nothing.
+**State: TestNet only.** DustGuard is deployed on TestNet as app 773797597, and real sweeps have gone
+through it there. Its ALGO has no value. MainNet: not deployed. Signing in Pera has not been tried yet;
+the page's code has been run end to end with a TestNet key signing in Pera's place.
 
 ## What the referee enforces
 
@@ -36,10 +37,14 @@ What it cannot enforce is written in its docstring: a page could build a sale wi
 
 | File | What it does |
 |---|---|
+| `index.html` | The signing page: look up a wallet, see every step in plain words, connect Pera and sign. |
+| `sweep.js` | The page's logic: quotes on Tinyman, builds the groups. Holds no key. |
 | `scan.py` | Reads a wallet (NFD name or addresses): each foreign token's value, what it locks, issuer powers. Public data only. |
 | `group.py` | Builds the unsigned sale groups (Tinyman swap, close-out, fee) and simulates them. Holds no key. |
 | `contracts/dust_guard.py` | DustGuard, the referee. |
 | `tests/test_guard.py` | An honest group must pass; each cheat, one change away, must fail at the guard. |
+| `tests/page.test.mjs` | The page's logic sells a TestNet token through the deployed guard, for real. |
+| `deploy_testnet.py` | Deploys the guard to TestNet with a test token, pool and seller, and runs one sweep. |
 | `logo.svg` | The bank. A pyramid, in the desert, with an eye on top. |
 
 Verdicts from `scan.py`: `sell` (priced above the 0.1 ALGO it locks), `dust` (priced below it),
@@ -49,6 +54,14 @@ one signed group leaves nobody holding the token for those powers to reach. A sc
 chain; intent is never judged here.
 
 ## Run it (Windows, PowerShell or Git Bash)
+
+The page needs no build. Serve the folder and open it:
+
+```text
+python -m http.server 8000
+```
+
+Then open http://localhost:8000. To check Python and the contract:
 
 ```text
 python -m venv .venv
@@ -61,6 +74,14 @@ python -m venv .venv
 `group.py ... new` creates DustGuard inside each simulated group, so the contract is exercised
 without being deployed. The tests need the network: they read mainnet through algonode and pick
 public holders of a pooled token at run time.
+
+The page's own test needs Node, a TestNet deploy and its keys in `.env` (never committed):
+
+```text
+npm install
+.venv\Scripts\python deploy_testnet.py FEE_ADDRESS
+node --test tests/page.test.mjs
+```
 
 Rebuild the contract after any edit, then rerun the tests:
 
