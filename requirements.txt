@@ -1,0 +1,6 @@
+# The versions the tests passed with. Python 3.14, Windows and WSL.
+py-algorand-sdk==2.12.0
+tinyman-py-sdk @ git+https://github.com/tinymanorg/tinyman-py-sdk.git@dd1fed50cdc18a699a994b25a1d4bdb11b902553
+algorand-python==4.0.0
+puyapy==5.10.1
+pytest==9.1.1
