@@ -24,17 +24,39 @@ async function send(txns, sk) {
   await algosdk.waitForConfirmation(client, txid, 10);
 }
 
-test('the page logic sells a TestNet token through DustGuard and the chain agrees', { skip: !ready }, async () => {
+const holds = async (who, token) =>
+  (await client.accountInformation(who).do()).assets?.some(a => Number(a.assetId) === token) ?? false;
+
+/** The TestNet keys, with the seller opted in to the test token and given 100,000 of it. */
+async function setup() {
   const funder = algosdk.mnemonicToSecretKey(env.TESTNET_MNEMONIC);
   const seller = algosdk.mnemonicToSecretKey(env.TESTNET_SELLER_MNEMONIC);
   const me = funder.addr.toString(), you = seller.addr.toString(), token = state.token;
   const sp = await client.getTransactionParams().do();
-  const held = (await client.accountInformation(you).do()).assets?.some(a => Number(a.assetId) === token);
-  if (!held) await send([algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject(
+  if (!await holds(you, token)) await send([algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject(
     { sender: you, receiver: you, amount: 0, assetIndex: token, suggestedParams: sp })], seller.sk);
   await send([algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject(
     { sender: me, receiver: you, amount: 100_000, assetIndex: token, suggestedParams: sp })], funder.sk);
+  return { seller, you, token, sp };
+}
 
+test('the chain refuses a 2% fee: nothing moves', { skip: !ready }, async () => {
+  const { seller, you, token, sp } = await setup();
+  const before = await guardState(net);
+  const { groups: [{ txns, fee }] } = await plan('testnet', you);
+  txns[txns.length - 2] = algosdk.makePaymentTxnWithSuggestedParamsFromObject(       // the fee leg, doubled
+    { sender: you, receiver: before.fee_address, amount: fee * 2n, suggestedParams: { ...sp, flatFee: true, fee: 1000n } });
+  for (const t of txns) t.group = undefined;
+  algosdk.assignGroupID(txns);
+  await assert.rejects(submit('testnet', [txns.map(t => t.signTxn(seller.sk))]), new RegExp(`app=${net.app}, pc=\\d+, opcodes=\\*; <=; assert`));   // the guard's fee-cap check
+  const after = await guardState(net);
+  assert.equal(after.iterations, before.iterations, 'the guard counted nothing');
+  assert.equal(after.fees, before.fees, 'no fee was taken');
+  assert.equal(await holds(you, token), true, 'the seller still holds the token: the sale did not happen');
+});
+
+test('the page logic sells a TestNet token through DustGuard and the chain agrees', { skip: !ready }, async () => {
+  const { seller, you, token } = await setup();
   const before = await guardState(net);
   const feeBefore = await balance(before.fee_address);
   const { rows, groups } = await plan('testnet', you);
@@ -49,6 +71,5 @@ test('the page logic sells a TestNet token through DustGuard and the chain agree
   assert.equal(after.iterations, before.iterations + 1n);
   assert.equal(after.fees - before.fees, fee);
   assert.equal(await balance(before.fee_address) - feeBefore, fee);
-  const still = (await client.accountInformation(you).do()).assets?.some(a => Number(a.assetId) === token);
-  assert.equal(still, false, 'the holding is closed out');
+  assert.equal(await holds(you, token), false, 'the holding is closed out');
 });
